@@ -1,0 +1,249 @@
+index.html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Student Council | เว็บสภานักเรียน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --main:#ff8c1a;
+  --dark:#111;
+  --light:#f5f5f5;
+}
+
+body{
+  margin:0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background:#0f0f0f;
+  color:white;
+}
+
+header{
+  background:linear-gradient(135deg,#ff8c1a,#ff5e00);
+  padding:40px 20px;
+  text-align:center;
+}
+
+header h1{
+  margin:0;
+  font-size:2.2rem;
+}
+
+header p{
+  opacity:0.9;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  background:#111;
+  padding:15px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--main);
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+h2{
+  color:var(--main);
+  margin-bottom:20px;
+}
+
+/* policy */
+.policy{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.policy-card{
+  background:#1b1b1b;
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+  border:1px solid #222;
+}
+
+.policy-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--main);
+}
+
+.policy-card h3{
+  margin-top:0;
+  color:#ffa64d;
+}
+
+/* members */
+.members{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.member{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.avatar{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff8c1a,#ff5e00);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+  margin:0 auto 15px;
+}
+
+.role{
+  color:#ffa64d;
+  font-size:0.9rem;
+}
+
+/* footer */
+footer{
+  background:#0a0a0a;
+  text-align:center;
+  padding:25px;
+  font-size:0.85rem;
+  opacity:0.8;
+}
+
+/* animation */
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.8s;
+}
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>สภานักเรียน โรงเรียนตัวอย่าง</h1>
+  <p>Student Council • โปร่งใส • สร้างสรรค์ • เพื่อทุกคน</p>
+</header>
+
+<nav>
+  <a href="#about">เกี่ยวกับเรา</a>
+  <a href="#policy">นโยบาย</a>
+  <a href="#team">คณะทำงาน</a>
+</nav>
+
+<section id="about" class="fade">
+  <h2>เกี่ยวกับสภานักเรียน</h2>
+  <p>
+    สภานักเรียนมีหน้าที่เป็นตัวแทนเสียงของนักเรียนทุกคน
+    รับฟังปัญหา ผลักดันแนวคิด และพัฒนาโรงเรียนให้เป็นพื้นที่ที่
+    ปลอดภัย ทันสมัย และเท่าเทียม
+  </p>
+</section>
+
+<section id="policy" class="fade">
+  <h2>นโยบายหลัก</h2>
+  <div class="policy">
+    <div class="policy-card">
+      <h3>🥗 โรงอาหารโปร่งใส</h3>
+      <p>ตรวจสอบคุณภาพอาหาร ราคายุติธรรม และเปิดรับข้อเสนอแนะจากนักเรียน</p>
+    </div>
+    <div class="policy-card">
+      <h3>🌱 SixSeven (67)</h3>
+      <p>ลดขยะ เพิ่มพื้นที่สีเขียว และรณรงค์ Zero Waste ภายในโรงเรียน</p>
+    </div>
+    <div class="policy-card">
+      <h3>📣 เสียงนักเรียนต้องได้ยิน</h3>
+      <p>เปิดช่องทางรับฟังความคิดเห็นผ่านออนไลน์และกล่องรับฟังปัญหา</p>
+    </div>
+    <div class="policy-card">
+      <h3>💡 โรงเรียนทันสมัย</h3>
+      <p>ผลักดันสื่อการเรียนรู้ดิจิทัล และกิจกรรมที่ตอบโจทย์ยุคใหม่</p>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="fade">
+  <h2>คณะสภานักเรียน</h2>
+  <div class="members">
+    <div class="member">
+      <div class="avatar">A</div>
+      <h3>นาย A</h3>
+      <div class="role">ประธานสภานักเรียน</div>
+    </div>
+    <div class="member">
+      <div class="avatar">B</div>
+      <h3>นางสาว B</h3>
+      <div class="role">รองประธาน</div>
+    </div>
+    <div class="member">
+      <div class="avatar">C</div>
+      <h3>นาย C</h3>
+      <div class="role">เลขานุการ</div>
+    </div>
+    <div class="member">
+      <div class="avatar">D</div>
+      <h3>นางสาว D</h3>
+      <div class="role">ฝ่ายประชาสัมพันธ์</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Student Council • เว็บไซต์สภานักเรียน
+</footer>
+
+<script>
+const fades = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.2});
+
+fades.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
