@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUCSEED | สวนกุหลาบวิทยาลัย ชลบุรี</title>
@@ -205,7 +206,7 @@
 </div>
 
                 
-                
+              
     </section>
 
     <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
@@ -221,7 +222,20 @@
             </div>
         </div>
     </div>
+<section class="py-10 px-6 bg-red-600 text-center">
+    <h2 class="text-2xl font-black italic mb-4 uppercase">ดวงของคุณกับ SUCSEED</h2>
+    <p class="mb-6 text-sm font-bold">ลองสุ่มดูว่านโยบายไหนที่จะเปลี่ยนชีวิตคุณ!</p>
+    
+    <button onclick="randomPolicy()" class="bg-black text-white px-8 py-4 font-black uppercase shadow-[6px_6px_0px_#fff] active:translate-y-1 active:shadow-none transition-all">
+        สุ่มนโยบายนำโชค 🍀
+    </button>
 
+    <div id="gacha-result" class="hidden mt-8 p-6 bg-white text-black max-w-sm mx-auto border-4 border-black rotate-1">
+        <p class="text-[10px] font-black uppercase text-red-600">Your Lucky Policy</p>
+        <h3 id="gacha-title" class="text-2xl font-black mb-2 uppercase"></h3>
+        <p id="gacha-desc" class="text-sm font-medium"></p>
+    </div>
+</section>
     <footer class="bg-black py-12 border-t border-zinc-800 text-center">
         <p class="font-black italic text-2xl mb-2 italic">VOTE <span class="text-red-600">SUCSEED</span> #1</p>
         <p class="text-zinc-600 text-sm tracking-widest uppercase">Suankularb Wittayalai Chonburi | Student Council 2026\n</p>
