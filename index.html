@@ -84,6 +84,23 @@
 
   </div>
 </nav>
+    <script>// ฟังก์ชันปิด Loading Screen เมื่อโหลดหน้าเว็บเสร็จ
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    
+    // ล็อกการสกロールตอนกำลังโหลด
+    document.body.classList.add('stop-scrolling');
+
+    setTimeout(() => {
+        loader.style.opacity = '0'; // ค่อยๆ จางหาย
+        document.body.classList.remove('stop-scrolling'); // ให้กลับมาสกロールได้
+        
+        setTimeout(() => {
+            loader.style.display = 'none'; // นำออกจากหน้าจอ
+        }, 700);
+    }, 1500); // ตั้งเวลาให้โชว์ Loading อย่างน้อย 1.5 วินาทีเพื่อความเท่
+});
+    </script>
 <script>// --- ส่วนของระบบสุ่มดวง ---
 function shakeFortune() {
     const card = document.getElementById('fortune-card');
