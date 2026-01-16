@@ -9,6 +9,10 @@
     <style>
         body { font-family: 'Kanit', sans-serif; scroll-behavior: smooth; }
         .gradient-bg { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); }
+        /* สไตล์สำหรับ Modal */
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-blur: 5px; }
+        .modal-content { animation: zoomIn 0.3s; }
+        @keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -27,83 +31,89 @@
         </div>
     </nav>
 
+    <section id="home" class="gradient-bg text-white pt-32 pb-20 px-6 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-indigo-100 text-lg mb-2 tracking-widest uppercase">เบอร์ 1 | Sucseed</h2>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">สร้างสรรค์โรงเรียน <br><span class="text-yellow-300">ให้เป็นบ้านที่น่าอยู่</span></h1>
+            <p class="max-w-2xl mx-auto text-indigo-50 text-lg mb-10 italic">"ไม่พูดให้จำ เดี๋ยวทำให้ดู"</p>
+        </div>
+    </section>
+
     <section id="team" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-indigo-900">สมาชิกในพรรค</h2>
-            <p class="text-center text-slate-500 mb-12">ทีมตัวจริง พร้อมลุยเพื่อเพื่อนทุกคน</p>
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-indigo-900">สมาชิกในพรรค</h2>
+            <p class="text-slate-500 mb-12 italic text-sm">คลิกรุป</p>
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 items-end">
                 
-                <div class="bg-indigo-50 p-6 rounded-2xl text-center border-b-4 border-indigo-300 shadow-sm">
-                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden">
-                        <img src="https://via.placeholder.com/100" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600', 'สมชาย ใจดี', 'รองประธานคนที่ 1', 'รับผิดชอบดูแลความเรียบร้อยทั่วไป')" class="cursor-pointer group">
+                    <div class="bg-indigo-50 p-6 rounded-2xl border-b-4 border-indigo-300 shadow-sm group-hover:bg-indigo-100 transition">
+                        <div class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden shadow-inner">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover group-hover:scale-110 transition">
+                        </div>
+                        <h3 class="font-bold">ชื่อ</h3>
+                        <p class="text-indigo-600 text-xs font-semibold">รองประธานคนที่ 1</p>
                     </div>
-                    <h3 class="font-bold text-base">ชื่อ</h3>
-                    <p class="text-indigo-600 text-xs">รองประธานคนที่ 1</p>
                 </div>
 
-                <div class="bg-indigo-50 p-6 rounded-2xl text-center border-b-4 border-indigo-300 shadow-sm">
-                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden">
-                        <img src="https://instagram.fbkk22-1.fna.fbcdn.net/v/t51.2885-19/503640564_18285213358253221_1837337916282763603_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fbkk22-1.fna.fbcdn.net&_nc_cat=101&_nc_oc=Q6cZ2QHdHMF5YQHE2Z3zgs8k8AcRXZp6_C-iP1f9OuIqjt_jX6ZadjH_sKEkk6K0N6OwSUQ&_nc_ohc=H7o8UIeqjNUQ7kNvwH6FC09&_nc_gid=XlurycYZrjxw0dZVdqZwAA&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_Afq8ZJAEmC0gP_lgvtkSUUi1gRAfIcqHYMfsmNq-0cQ4jg&oe=696EB56C&_nc_sid=7d3ac5
-                            #]">
+                <div onclick="openModal('https://via.placeholder.com/600', 'สมหญิง รักดี', 'เลขานุการสภา', 'ดูแลงานเอกสารและสรุปการประชุม')" class="cursor-pointer group">
+                    <div class="bg-indigo-50 p-6 rounded-2xl border-b-4 border-indigo-300 shadow-sm group-hover:bg-indigo-100 transition">
+                        <div class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden shadow-inner">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover group-hover:scale-110 transition">
+                        </div>
+                        <h3 class="font-bold">ชื่อ</h3>
+                        <p class="text-indigo-600 text-xs font-semibold">เลขานุการสภา</p>
                     </div>
-                    <h3 class="font-bold text-base">ชื่อ</h3>
-                    <p class="text-indigo-600 text-xs">เลขานุการสภา</p>
                 </div>
 
-                <div class="bg-indigo-600 p-8 rounded-2xl text-center text-white shadow-xl transform lg:-translate-y-6 border-b-8 border-yellow-400 order-first lg:order-none col-span-2 md:col-span-1">
-                    <div class="w-28 h-28 bg-slate-200 rounded-full mx-auto mb-4 border-4 border-indigo-400 overflow-hidden">
-                        <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600', 'หัวหน้า ทีมงาน', 'ประธานนักเรียน', 'ผู้นำทีมมุ่งมั่นสร้างความสุขให้เพื่อนนักเรียนทุกคน')" class="cursor-pointer group order-first lg:order-none col-span-2 md:col-span-1">
+                    <div class="bg-indigo-600 p-8 rounded-2xl text-white shadow-xl transform lg:-translate-y-6 border-b-8 border-yellow-400 group-hover:bg-indigo-700 transition">
+                        <div class="w-28 h-28 bg-white rounded-full mx-auto mb-4 border-4 border-indigo-400 overflow-hidden shadow-lg">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover group-hover:scale-110 transition">
+                        </div>
+                        <h3 class="font-bold text-xl">ชื่อประธาน</h3>
+                        <p class="text-indigo-100 text-sm italic">ประธานนักเรียน</p>
                     </div>
-                    <h3 class="font-bold text-xl">ชื่อ</h3>
-                    <p class="text-indigo-200 mb-2 text-sm">ประธานนักเรียน</p>
-                    <p class="text-xs italic">"ไม่พูดให้จำ เดี๋ยวทำให้ดู"</p>
                 </div>
 
-                <div class="bg-indigo-50 p-6 rounded-2xl text-center border-b-4 border-indigo-300 shadow-sm">
-                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden">
-                        <img src="https://via.placeholder.com/100" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600', 'เงินทอง มีใช้', 'เหรัญญิก', 'ดูแลการเบิกจ่ายและงบประมาณพรรค')" class="cursor-pointer group">
+                    <div class="bg-indigo-50 p-6 rounded-2xl border-b-4 border-indigo-300 shadow-sm group-hover:bg-indigo-100 transition">
+                        <div class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden shadow-inner">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover group-hover:scale-110 transition">
+                        </div>
+                        <h3 class="font-bold">ชื่อ</h3>
+                        <p class="text-indigo-600 text-xs font-semibold">เหรัญญิก</p>
                     </div>
-                    <h3 class="font-bold text-base">ชื่อ</h3>
-                    <p class="text-indigo-600 text-xs">เหรัญญิก</p>
                 </div>
 
-                <div class="bg-indigo-50 p-6 rounded-2xl text-center border-b-4 border-indigo-300 shadow-sm">
-                    <div class="w-20 h-20 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden">
-                        <img src="https://via.placeholder.com/100" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600', 'กิจกรรม ดีเด่น', 'ฝ่ายกิจกรรม', 'ดูแลการจัดงานเทศกาลและกีฬาสี')" class="cursor-pointer group">
+                    <div class="bg-indigo-50 p-6 rounded-2xl border-b-4 border-indigo-300 shadow-sm group-hover:bg-indigo-100 transition">
+                        <div class="w-24 h-24 bg-slate-300 rounded-full mx-auto mb-4 border-2 border-white overflow-hidden shadow-inner">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover group-hover:scale-110 transition">
+                        </div>
+                        <h3 class="font-bold">กิจกรรม</h3>
+                        <p class="text-indigo-600 text-xs font-semibold">ฝ่ายกิจกรรม</p>
                     </div>
-                    <h3 class="font-bold text-base">ชื่อ</h3>
-                    <p class="text-indigo-600 text-xs">ฝ่ายกิจกรรม</p>
                 </div>
 
-            </div>
-
-            <h3 class="text-2xl font-bold text-center mt-20 mb-8 text-indigo-800 italic">หัวหน้าฝ่ายทั้ง 4</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-4 bg-slate-50 rounded-xl hover:bg-indigo-100 transition shadow-sm border border-slate-100">
-                    <div class="text-3xl mb-2">📚</div>
-                    <h4 class="font-bold">ฝ่ายวิชาการ</h4>
-                    <p class="text-xs text-slate-500 mt-1 italic">เพิ่มแหล่งเรียนรู้ ติวเข้มก่อนสอบ</p>
-                </div>
-                <div class="text-center p-4 bg-slate-50 rounded-xl hover:bg-indigo-100 transition shadow-sm border border-slate-100">
-                    <div class="text-3xl mb-2">🎨</div>
-                    <h4 class="font-bold">ฝ่ายกิจกรรม</h4>
-                    <p class="text-xs text-slate-500 mt-1 italic">งานเทศกาล กีฬา และนันทนาการ</p>
-                </div>
-                <div class="text-center p-4 bg-slate-50 rounded-xl hover:bg-indigo-100 transition shadow-sm border border-slate-100">
-                    <div class="text-3xl mb-2">📢</div>
-                    <h4 class="font-bold">ฝ่ายประชาสัมพันธ์</h4>
-                    <p class="text-xs text-slate-500 mt-1 italic">แจ้งข่าวไว รับฟังทุกความเห็น</p>
-                </div>
-                <div class="text-center p-4 bg-slate-50 rounded-xl hover:bg-indigo-100 transition shadow-sm border border-slate-100">
-                    <div class="text-3xl mb-2">🧹</div>
-                    <h4 class="font-bold">ฝ่ายพัสดุ</h4>
-                    <p class="text-xs text-slate-500 mt-1 italic">ดูแลอุปกรณ์ และสวัสดิการ</p>
-                </div>
             </div>
         </div>
     </section>
-        
+
+    <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
+        <div class="modal-content bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+            <div class="relative">
+                <img id="modalImg" src="" class="w-full h-80 object-cover">
+                <button onclick="closeModal()" class="absolute top-4 right-4 bg-black/50 text-white w-10 h-10 rounded-full text-xl">&times;</button>
+            </div>
+            <div class="p-8 text-center">
+                <h3 id="modalName" class="text-3xl font-bold text-indigo-900 mb-1"></h3>
+                <p id="modalRole" class="text-indigo-600 font-semibold mb-4"></p>
+                <div class="h-px bg-slate-100 w-full mb-4"></div>
+                <p id="modalDesc" class="text-slate-600 leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
 
     <section id="policy" class="py-20 bg-slate-50">
         <div class="container mx-auto px-6">
@@ -111,35 +121,38 @@
             <div class="max-w-4xl mx-auto space-y-4">
                 <details class="bg-white p-4 rounded-lg shadow-sm group border-l-4 border-indigo-500 cursor-pointer">
                     <summary class="font-bold text-lg flex justify-between items-center">
-                        นโยบาย บลาๆๆๆ
+                        Countdown for the policy
                         <span class="group-open:rotate-180 transition">👇</span>
                     </summary>
-                    <p class="mt-3 text-slate-600">เราจะจัดหาเจลล้างมือ ติดตั้งพัดลมระบายอากาศ และระบบแจ้งซ่อมผ่าน QR Code เมื่อห้องน้ำชำรุด</p>
-                </details>
-
-                <details class="bg-white p-4 rounded-lg shadow-sm group border-l-4 border-indigo-500 cursor-pointer">
-                    <summary class="font-bold text-lg flex justify-between items-center">
-                       นโยบาย บลาๆๆๆ
-                        <span class="group-open:rotate-180 transition">👇</span>
-                    </summary>
-                    <p class="mt-3 text-slate-600">จัดกิจกรรม Busking หรือตลาดนัดศิลปะในช่วงพักกลางวันเดือนละ 1 ครั้ง</p>
+                    <p class="mt-3 text-slate-600 italic">Countdown for the policy</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <footer class="bg-indigo-900 text-white py-10 px-6">
-        <div class="container mx-auto text-center">
-            <p class="mb-4 font-semibold italic text-yellow-300">"เลือกเบอร์ 1 เลือกอนาคตของโรงเรียนเรา"</p>
-            <p class="text-sm opacity-60">จัดทำโดย ทีมงานประชาสัมพันธ์ พรรคSucseed</p>
-        </div>
+    <footer class="bg-indigo-900 text-white py-10 px-6 text-center">
+        <p class="mb-4 font-semibold italic text-yellow-300">"เลือกเบอร์ 1 เลือกอนาคตของโรงเรียนเรา"</p>
+        <p class="text-sm opacity-60">จัดทำโดย ฝ่ายกราฟิก พรรค Sucseed</p>
     </footer>
 
     <script>
-        // ฟังก์ชันคลิกแล้วมีหัวใจเด้งขึ้นมา (เพิ่มความสนุกให้นักเรียน)
+        // ฟังก์ชันเปิด Modal
+        function openModal(imgSrc, name, role, desc) {
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalRole').innerText = role;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('infoModal').style.display = 'flex';
+        }
+
+        // ฟังก์ชันปิด Modal
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+
+        // ฟังก์ชันหัวใจเหมือนเดิม
         document.addEventListener('click', function(e) {
-            if (e.target.tagName === 'BUTTON' || e.target.closest('a')) return;
-            
+            if (e.target.closest('.cursor-pointer') || e.target.closest('a')) return;
             const heart = document.createElement('div');
             heart.innerHTML = '❤️';
             heart.style.position = 'fixed';
@@ -147,14 +160,11 @@
             heart.style.top = (e.clientY - 10) + 'px';
             heart.style.pointerEvents = 'none';
             heart.style.transition = 'all 1s ease-out';
-            heart.style.opacity = '1';
             document.body.appendChild(heart);
-            
             setTimeout(() => {
                 heart.style.transform = 'translateY(-50px)';
                 heart.style.opacity = '0';
             }, 10);
-            
             setTimeout(() => heart.remove(), 1000);
         });
     </script>
