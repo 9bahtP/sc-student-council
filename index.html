@@ -36,19 +36,32 @@
 </head>
 <body class="grunge-bg">
 
-    <nav class="fixed w-full z-50 bg-black/90 border-b-2 border-red-600">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="bg-red-600 text-white font-black px-2 py-1 italic text-2xl">S</div>
-                <span class="text-xl font-black tracking-tighter italic">SUCSEED <span class="text-red-600">2026</span></span>
-            </div>
-            <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase">
-                <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
-                <li><a href="#team" class="hover:text-red-500 transition">Team</a></li>
-                <li><a href="#policy" class="hover:text-red-500 transition">Policy</a></li>
-            </ul>
-        </div>
-    </nav>
+   <nav class="fixed w-full z-50 bg-black/90 border-b-2 border-red-600">
+  <div
+    class="container mx-auto flex justify-between items-center
+           px-4 sm:px-6 py-4"
+    style="
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    "
+  >
+    <div class="flex items-center gap-3">
+      <div class="bg-red-600 text-white font-black px-2 py-1 italic text-2xl">
+        S
+      </div>
+      <span class="text-xl font-black tracking-tighter italic">
+        SUCSEED <span class="text-red-600">2026</span>
+      </span>
+    </div>
+
+    <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase">
+      <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
+      <li><a href="#team" class="hover:text-red-500 transition">Team</a></li>
+      <li><a href="#policy" class="hover:text-red-500 transition">Policy</a></li>
+    </ul>
+  </div>
+</nav>
+
 
     <section id="home" class="pt-48 pb-20 px-6 relative overflow-hidden">
         <div class="absolute top-20 right-[-50px] opacity-20 text-[15rem] font-black italic select-none">SUCSEED</div>
