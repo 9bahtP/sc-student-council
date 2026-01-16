@@ -56,15 +56,7 @@
         </div>
     </div>
 </div>
-<div class="relative group overflow-hidden">
-    <img src="..." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
-    
-    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-        <span class="border-2 border-white px-4 py-1 text-xs font-black italic">VIEW INFO</span>
-    </div>
-</div>
-    <div class="member-card cursor-pointer hover:scale-105 transition-transform duration-300">
-   </div>
+
 <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 border-b-2 border-red-600">
     <div class="w-full px-6 sm:px-10 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3 min-w-0">
@@ -101,6 +93,11 @@
 <section id="team" class="py-20 bg-zinc-950/50">
     <div class="container mx-auto px-4">
         <h2 class="text-4xl font-black text-center mb-16 italic underline decoration-red-600">OUR SQUAD</h2>
+        <h2 class="text-4xl font-black text-center mb-2 italic underline decoration-red-600 uppercase">Our Squad</h2>
+<p class="text-center text-zinc-500 text-xs mb-12 animate-pulse uppercase tracking-widest italic">
+    — Tap on photo to see the truth —
+</p>
+        
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-end">
             
             <div onclick="openModal('https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC', 'นายธาวา พัชรนรากุล', 'รองประธาน', 'กำขี้ ดีกว่า กำตด')" class="member-card cursor-pointer group order-2 lg:order-1">
@@ -123,16 +120,14 @@
                 </div>
             </div>
 
-            <div onclick="openModal('https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwGDEdDE&_nc_oc=Adlypc2o7H6LX0OKPKYTMYW2xm2GtVQAqD17oGjCbqYMeGzQyiiz9Sx2E5gqr6AUG-k&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-2.fna&oh=03_Q7cD4QERAquiXh-KPcyN9ntqqSk2l6Quw37_TcB4JOK7SH3FXg&oe=69919B7F', 'นางสาวณัฐณิชา โตกำแพง', 'ประธานนักเรียน', 'ไม่พูดให้จำ แต่จะทำให้ดู')" class="member-card cursor-pointer order-1 lg:order-3">
-                <div class="bg-red-600 p-10 transform lg:-translate-y-8 shadow-[10px_10px_0px_rgba(255,255,255,0.2)] text-center">
-                    <div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden shadow-xl">
-                        <img src="https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwGDEdDE&_nc_oc=Adlypc2o7H6LX0OKPKYTMYW2xm2GtVQAqD17oGjCbqYMeGzQyiiz9Sx2E5gqr6AUG-k&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-2.fna&oh=03_Q7cD4QERAquiXh-KPcyN9ntqqSk2l6Quw37_TcB4JOK7SH3FXg&oe=69919B7F" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-black text-2xl uppercase">หยก</h3>
-                    <p class="text-white text-sm font-bold mb-4 italic underline">ประธานนักเรียน</p>
-                    <p class="text-xs font-bold bg-black text-white py-1">"Just act No talk"</p>
-                </div>
-            </div>
+            <div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden relative group">
+    <img src="https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?..." 
+         class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+    
+    <div class="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+        <span class="text-[10px] font-black bg-white text-black px-2 py-0.5 shadow-md">VIEW INFO</span>
+    </div>
+</div>
 
             <div onclick="openModal('https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwFpDRNt&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA', 'นายกฤตเมธ จันละบุตร', 'สถานที่', 'ซักซี้ด ซักรีด ซักไซ้')" class="member-card cursor-pointer group order-4">
                 <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
