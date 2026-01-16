@@ -91,12 +91,12 @@
                     </div>
                 </div>
 
-                <div onclick="openModal('https://via.placeholder.com/600x800', 'นางสาวหยก ไม่', 'ประธานนักเรียน', 'คติ')" class="member-card cursor-pointer group order-first lg:order-none col-span-full lg:col-span-1">
+                <div onclick="openModal('https://via.placeholder.com/600x800', 'นางสาวหยก ไม่รุ้ชื่อ', 'ประธานนักเรียน', 'คติ')" class="member-card cursor-pointer group order-first lg:order-none col-span-full lg:col-span-1">
                     <div class="bg-red-600 p-10 transform lg:-translate-y-8 shadow-[10px_10px_0px_rgba(255,255,255,0.2)] text-center">
                         <div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden shadow-xl">
                             <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="font-black text-2xl uppercase">ชื่อประธาน</h3>
+                        <h3 class="font-black text-2xl uppercase">หยก</h3>
                         <p class="text-white text-sm font-bold mb-4 italic underline">ประธานนักเรียน</p>
                         <p class="text-xs font-bold bg-black text-white py-1">"Just act No talk"</p>
                     </div>
@@ -112,12 +112,12 @@
                     </div>
                 </div>
 
-                <div onclick="openModal('https://via.placeholder.com/600x800', 'นางสาวเอมี่ อมิตา ลิม', 'ฝ่ายกิจกรรม', 'คติมา')" class="member-card cursor-pointer group">
+                <div onclick="openModal('https://via.placeholder.com/600x800', 'เอมี่', 'ฝ่ายกิจกรรม', 'คติมา')" class="member-card cursor-pointer group">
                     <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
                         <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
                             <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="font-bold text-lg">กิจกรรม</h3>
+                        <h3 class="font-bold text-lg">นางสาวเอมี่ อมิตา ลิม</h3>
                         <p class="text-red-500 text-xs font-bold uppercase">ฝ่ายกิจกรรม</p>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
         </div>
     </section>
 
-   <section id="policy" class="py-20 px-6">
+    <section id="policy" class="py-20 px-6">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-4xl font-black mb-12 text-center italic"><span class="bg-white text-black px-4">THE POLICY</span></h2>
             <div class="space-y-6">
@@ -145,34 +145,6 @@
             </div>
         </div>
     </section>
-
-<footer class="bg-black py-12 border-t border-zinc-800 text-center">
-  <p class="font-black text-2xl mb-2 italic">
-    VOTE <span class="text-red-600">SUCSEED</span> #1
-  </p>
-  <p class="text-zinc-600 text-sm uppercase tracking-widest">
-    Student Council 2026
-  </p>
-</footer>
-
-<!-- COUNTDOWN SCRIPT -->
-<script>
-const target = new Date("2026-01-21T07:00:00+07:00").getTime();
-
-setInterval(()=>{
-  const now = new Date().getTime();
-  let diff = target - now;
-  if(diff < 0) diff = 0;
-
-  const d = Math.floor(diff / (1000*60*60*24));
-  const h = Math.floor(diff / (1000*60*60) % 24);
-  const m = Math.floor(diff / (1000*60) % 60);
-  const s = Math.floor(diff / 1000 % 60);
-
-  document.getElementById("d").innerText = d;
-  document.getElementById("h").innerText = h;
-  document.getElementById("m").innerText = m;
-  document.getElementById("s").innerText = s;
 
     <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
         <div class="modal-content bg-zinc-900 border-4 border-white max-w-md w-full overflow-hidden relative shadow-[20px_20px_0px_#e11d48]" onclick="event.stopPropagation()">
