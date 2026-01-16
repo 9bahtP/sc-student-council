@@ -209,26 +209,20 @@
               
     </section>
 
-    <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
-        <div class="modal-content bg-zinc-900 border-4 border-white max-w-md w-full overflow-hidden relative shadow-[20px_20px_0px_#e11d48]" onclick="event.stopPropagation()">
-            <img id="modalImg" src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/613892652_851669544346220_4082493262980650938_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IAY_ect3HAgQ7kNvwEFTfCW&_nc_oc=Adl0-1mYQg73eF7-__Qfiy2ZODpvessJTmo-94NojpBXQCcfboD4qz51-6u7bAlO8Xg&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QG9qepTv7VQqlY9H-VgFuSocqusV19Yp_JVfgiIfo4lJg&oe=6991A1C2
-                " class="w-full h-96 object-cover grayscale hover:grayscale-0 transition duration-500">
-            <div class="p-8">
-                <h3 id="modalName" class="text-4xl font-black italic uppercase text-white mb-1"></h3>
-                <p id="modalRole" class="text-red-600 font-bold mb-4 tracking-tighter italic"></p>
-                <div class="h-1 bg-white w-20 mb-4"></div>
-                <p id="modalDesc" class="text-gray-400 font-light"></p>
-                <button onclick="closeModal()" class="mt-8 w-full py-2 bg-red-600 text-white font-black hover:bg-white hover:text-black transition">CLOSE</button>
-            </div>
-        </div>
-    </div>
-<section class="py-10 px-6 bg-red-600 text-center">
+    <section class="py-10 px-6 bg-red-600 text-center">
     <h2 class="text-2xl font-black italic mb-4 uppercase">ดวงของคุณกับ SUCSEED</h2>
     <p class="mb-6 text-sm font-bold">ลองสุ่มดูว่านโยบายไหนที่จะเปลี่ยนชีวิตคุณ!</p>
     
     <button onclick="randomPolicy()" class="bg-black text-white px-8 py-4 font-black uppercase shadow-[6px_6px_0px_#fff] active:translate-y-1 active:shadow-none transition-all">
         สุ่มนโยบายนำโชค 🍀
     </button>
+
+    <div id="gacha-result" class="hidden mt-8 p-6 bg-white text-black max-w-sm mx-auto border-4 border-black rotate-1">
+        <p class="text-[10px] font-black uppercase text-red-600">Your Lucky Policy</p>
+        <h3 id="gacha-title" class="text-2xl font-black mb-2 uppercase"></h3>
+        <p id="gacha-desc" class="text-sm font-medium"></p>
+    </div>
+</section>
 
     <div id="gacha-result" class="hidden mt-8 p-6 bg-white text-black max-w-sm mx-auto border-4 border-black rotate-1">
         <p class="text-[10px] font-black uppercase text-red-600">Your Lucky Policy</p>
@@ -275,6 +269,36 @@
                 star.style.opacity = '0';
             }, 10);
             setTimeout(() => star.remove(), 600);
+            function randomPolicy() {
+    // 1. ระบบสั่นมือถือ (Mobile Haptic)
+    if (navigator.vibrate) {
+        navigator.vibrate([50, 30, 50]); 
+    }
+
+    const policies = [
+        { title: "67sixseven", desc: "สัปดาห์นี้ปัญหาที่คุณบ่น จะได้รับการแก้ไข!", color: "#e11d48" },
+        { title: "สัมภาษณ์สยาม", desc: "เตรียมตัวให้พร้อม คุณอาจเป็นดาวเด่นในคลิปถัดไป!", color: "#f97316" },
+        { title: "The Final Chapter", desc: "เตรียมชุดให้พร้อม พรอมปีนี้คุณจะปังที่สุด!", color: "#000" },
+        { title: "SUCSEED Power", desc: "โชคดีมาก! วันนี้จะมีเรื่องดีๆ เกิดขึ้นในโรงเรียน", color: "#e11d48" }
+    ];
+
+    const random = policies[Math.floor(Math.random() * policies.length)];
+    
+    // 2. แสดงผล UI
+    const resultDiv = document.getElementById('gacha-result');
+    document.getElementById('gacha-title').innerText = random.title;
+    document.getElementById('gacha-desc').innerText = random.desc;
+    resultDiv.classList.remove('hidden');
+    resultDiv.style.borderColor = random.color;
+
+    // 3. จุดพลุฉลอง (Confetti)
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.8 },
+        colors: ['#e11d48', '#ffffff', '#000000']
+    });
+}
         });
     </script>
 </body>
