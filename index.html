@@ -1,204 +1,185 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUCSEED | สวนกุหลาบวิทยาลัย ชลบุรี</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { 
-            font-family: 'Kanit', sans-serif; 
-            background-color: #000000; 
-            color: white;
-            scroll-behavior: smooth;
-        }
-        
-        /* สไตล์สีตามรูป SUCSEED */
-        .color-red { color: #e11d48; }
-        .bg-red-main { background-color: #e11d48; }
-        .bg-orange-accent { background-color: #f97316; }
-        .border-grunge { border: 4px solid #fff; box-shadow: 5px 5px 0px #e11d48; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUCSEED | สวนกุหลาบวิทยาลัย ชลบุรี</title>
 
-        /* พื้นหลังแบบมี Texture เล็กน้อย */
-        .grunge-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
-        }
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-        /* Modal Style */
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(10px); }
-        .modal-content { animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        @keyframes popIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+<style>
+body{ 
+  font-family:'Kanit',sans-serif;
+  background:#000;
+  color:white;
+  scroll-behavior:smooth;
+}
 
-        /* เอฟเฟกต์ปุ่มและบัตร */
-        .member-card:hover { transform: translateY(-10px) rotate(1deg); transition: all 0.3s; }
-    </style>
+.grunge-bg{
+  background-image:
+  linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85)),
+  url('https://www.transparenttextures.com/patterns/dark-matter.png');
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  backdrop-filter:blur(10px);
+  z-index:100;
+}
+
+.member-card:hover{
+  transform:translateY(-10px) rotate(1deg);
+  transition:.3s;
+}
+</style>
 </head>
+
 <body class="grunge-bg">
 
-    <nav class="fixed w-full z-50 bg-black/90 border-b-2 border-red-600">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="bg-red-600 text-white font-black px-2 py-1 italic text-2xl">S</div>
-                <span class="text-xl font-black tracking-tighter italic">SUCSEED <span class="text-red-600">2026</span></span>
-            </div>
-            <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase">
-                <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
-                <li><a href="#team" class="hover:text-red-500 transition">Team</a></li>
-                <li><a href="#policy" class="hover:text-red-500 transition">Policy</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="home" class="pt-48 pb-20 px-6 relative overflow-hidden">
-        <div class="absolute top-20 right-[-50px] opacity-20 text-[15rem] font-black italic select-none">SUCSEED</div>
-        <div class="container mx-auto text-center relative z-10">
-            <h2 class="bg-red-600 text-white inline-block px-4 py-1 font-bold mb-4 skew-x-[-10deg]">เบอร์ 1 | SUCSEED</h2>
-            <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter">
-                สร้างสรรค์โรงเรียน <br>
-                <span class="text-transparent" style="-webkit-text-stroke: 2px white;">ให้เป็นบ้านที่น่าอยู่</span>
-            </h1>
-            <p class="max-w-xl mx-auto text-gray-400 text-lg mb-8 font-light italic">
-                "ไม่พูดให้จำ เดี๋ยวทำให้ดู" — พร้อมเปลี่ยนสวนกุหลาบชลบุรีให้ก้าวหน้ากว่าที่เคย
-            </p>
-            <a href="#policy" class="bg-white text-black px-10 py-3 font-black uppercase hover:bg-red-600 hover:text-white transition-all inline-block">อ่านนโยบาย</a>
-        </div>
-    </section>
-
-    <section id="team" class="py-20 bg-zinc-950/50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-black text-center mb-16 italic underline decoration-red-600">OUR SQUAD</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-end">
-                
-                <div onclick="openModal('https://via.placeholder.com/600x800', 'นายธาวา พัชรนรากุล', 'รองประธาน', 'คติ')" class="member-card cursor-pointer group">
-                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
-                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
-                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="font-bold text-lg">โตโน่</h3>
-                        <p class="text-red-500 text-xs font-bold uppercase">รองประธาน</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('https://via.placeholder.com/600x800', 'นางสาวกฤติยา ทัพซ้าย', 'เลขานุการ', 'คติ')" class="member-card cursor-pointer group">
-                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
-                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
-                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="font-bold text-lg">จูน</h3>
-                        <p class="text-red-500 text-xs font-bold uppercase">เลขานุการสภา</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('https://via.placeholder.com/600x800', 'นางสาวหยก ไม่', 'ประธานนักเรียน', 'คติ')" class="member-card cursor-pointer group order-first lg:order-none col-span-full lg:col-span-1">
-                    <div class="bg-red-600 p-10 transform lg:-translate-y-8 shadow-[10px_10px_0px_rgba(255,255,255,0.2)] text-center">
-                        <div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden shadow-xl">
-                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="font-black text-2xl uppercase">ชื่อประธาน</h3>
-                        <p class="text-white text-sm font-bold mb-4 italic underline">ประธานนักเรียน</p>
-                        <p class="text-xs font-bold bg-black text-white py-1">"Just act No talk"</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('https://via.placeholder.com/600x800', 'ใครเงินไม่รุ้', 'เหรัญญิก', 'คติ')" class="member-card cursor-pointer group">
-                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
-                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
-                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="font-bold text-lg">ใครดูแลตังค์คนนั้นแหละ</h3>
-                        <p class="text-red-500 text-xs font-bold uppercase">เหรัญญิก</p>
-                    </div>
-                </div>
-
-                <div onclick="openModal('https://via.placeholder.com/600x800', 'นางสาวเอมี่ อมิตา ลิม', 'ฝ่ายกิจกรรม', 'คติมา')" class="member-card cursor-pointer group">
-                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
-                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
-                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="font-bold text-lg">กิจกรรม</h3>
-                        <p class="text-red-500 text-xs font-bold uppercase">ฝ่ายกิจกรรม</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="policy" class="py-20 px-6">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-4xl font-black mb-12 text-center italic"><span class="bg-white text-black px-4">THE POLICY</span></h2>
-            <div class="space-y-6">
-                <div class="bg-zinc-900 border-l-8 border-red-600 p-8 hover:bg-zinc-800 transition shadow-lg">
-                    <h3 class="text-2xl font-black mb-3 text-red-600 uppercase">01. Countown for the policy</h3>
-                    <p class="text-gray-300">not now</p>
-                </div>
-                <div class="bg-zinc-900 border-l-8 border-orange-500 p-8 hover:bg-zinc-800 transition shadow-lg">
-                    <h3 class="text-2xl font-black mb-3 text-orange-500 uppercase">02. Countown for the policy</h3>
-                    <p class="text-gray-300">not now</p>
-                </div>
-                <div class="bg-zinc-900 border-l-8 border-white p-8 hover:bg-zinc-800 transition shadow-lg">
-                    <h3 class="text-2xl font-black mb-3 text-white uppercase">03. Countown for the policy</h3>
-                    <p class="text-gray-300">not now</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
-        <div class="modal-content bg-zinc-900 border-4 border-white max-w-md w-full overflow-hidden relative shadow-[20px_20px_0px_#e11d48]" onclick="event.stopPropagation()">
-            <img id="modalImg" src="" class="w-full h-96 object-cover grayscale hover:grayscale-0 transition duration-500">
-            <div class="p-8">
-                <h3 id="modalName" class="text-4xl font-black italic uppercase text-white mb-1"></h3>
-                <p id="modalRole" class="text-red-600 font-bold mb-4 tracking-tighter italic"></p>
-                <div class="h-1 bg-white w-20 mb-4"></div>
-                <p id="modalDesc" class="text-gray-400 font-light"></p>
-                <button onclick="closeModal()" class="mt-8 w-full py-2 bg-red-600 text-white font-black hover:bg-white hover:text-black transition">CLOSE</button>
-            </div>
-        </div>
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-black/90 border-b-2 border-red-600">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="bg-red-600 text-white font-black px-2 py-1 italic text-2xl">S</div>
+      <span class="text-xl font-black tracking-tighter italic">
+        SUCSEED <span class="text-red-600">2026</span>
+      </span>
     </div>
+    <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase">
+      <li><a href="#home" class="hover:text-red-500">Home</a></li>
+      <li><a href="#team" class="hover:text-red-500">Team</a></li>
+      <li><a href="#policy" class="hover:text-red-500">Policy</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <footer class="bg-black py-12 border-t border-zinc-800 text-center">
-        <p class="font-black italic text-2xl mb-2 italic">VOTE <span class="text-red-600">SUCSEED</span> #1</p>
-        <p class="text-zinc-600 text-sm tracking-widest uppercase">Suankularb Wittayalai Chonburi | Student Council 2026</p>
-    </footer>
+<!-- HERO -->
+<section id="home" class="pt-48 pb-20 px-6 relative overflow-hidden">
 
-    <script>
-        // ระบบเปิด-ปิด Modal ข้อมูลสมาชิก
-        function openModal(imgSrc, name, role, desc) {
-            document.getElementById('modalImg').src = imgSrc;
-            document.getElementById('modalName').innerText = name;
-            document.getElementById('modalRole').innerText = role;
-            document.getElementById('modalDesc').innerText = desc;
-            document.getElementById('infoModal').style.display = 'flex';
-        }
+  <!-- ✅ แก้ SUCSEED พื้นหลัง ไม่ย่อ -->
+  <div class="absolute top-24 right-[-10vw]
+              opacity-10 font-black italic
+              text-[40vw] leading-none
+              whitespace-nowrap select-none pointer-events-none">
+    SUCSEED
+  </div>
 
-        function closeModal() {
-            document.getElementById('infoModal').style.display = 'none';
-        }
+  <div class="container mx-auto text-center relative z-10">
+    <h2 class="bg-red-600 inline-block px-4 py-1 font-bold mb-4 skew-x-[-10deg]">
+      เบอร์ 1 | SUCSEED
+    </h2>
 
-        // เอฟเฟกต์คลิกแล้วมีสัญลักษณ์พรรคเด้งขึ้นมา
-        document.addEventListener('click', function(e) {
-            if (e.target.closest('.member-card') || e.target.closest('nav') || e.target.closest('button')) return;
-            const star = document.createElement('div');
-            star.innerHTML = '★';
-            star.style.color = '#e11d48';
-            star.style.position = 'fixed';
-            star.style.left = (e.clientX - 10) + 'px';
-            star.style.top = (e.clientY - 10) + 'px';
-            star.style.fontSize = '24px';
-            star.style.fontWeight = 'black';
-            star.style.pointerEvents = 'none';
-            star.style.zIndex = '1000';
-            star.style.transition = 'all 0.6s ease-out';
-            document.body.appendChild(star);
-            setTimeout(() => {
-                star.style.transform = 'translateY(-100px) rotate(360deg) scale(2)';
-                star.style.opacity = '0';
-            }, 10);
-            setTimeout(() => star.remove(), 600);
-        });
-    </script>
+    <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter">
+      สร้างสรรค์โรงเรียน <br>
+      <span class="text-transparent" style="-webkit-text-stroke:2px white;">
+        ให้เป็นบ้านที่น่าอยู่
+      </span>
+    </h1>
+
+    <p class="max-w-xl mx-auto text-gray-400 text-lg mb-8 italic">
+      "ไม่พูดให้จำ เดี๋ยวทำให้ดู"
+    </p>
+
+    <a href="#policy"
+       class="bg-white text-black px-10 py-3 font-black
+              hover:bg-red-600 hover:text-white transition">
+      อ่านนโยบาย
+    </a>
+  </div>
+</section>
+
+<!-- POLICY -->
+<section id="policy" class="py-20 px-6">
+  <div class="container mx-auto max-w-4xl">
+
+    <h2 class="text-4xl font-black mb-12 text-center italic">
+      <span class="bg-white text-black px-4">THE POLICY</span>
+    </h2>
+
+    <div class="space-y-6">
+
+      <!-- ✅ COUNTDOWN -->
+      <div class="bg-zinc-900 border-l-8 border-red-600 p-8 shadow-lg">
+        <h3 class="text-2xl font-black mb-4 text-red-600 uppercase">
+          01. Countdown to Action
+        </h3>
+
+        <div class="grid grid-cols-4 gap-4 text-center font-black">
+          <div>
+            <div id="d" class="text-4xl">0</div>
+            <div class="text-xs text-gray-400">DAYS</div>
+          </div>
+          <div>
+            <div id="h" class="text-4xl">0</div>
+            <div class="text-xs text-gray-400">HOURS</div>
+          </div>
+          <div>
+            <div id="m" class="text-4xl">0</div>
+            <div class="text-xs text-gray-400">MIN</div>
+          </div>
+          <div>
+            <div id="s" class="text-4xl">0</div>
+            <div class="text-xs text-gray-400">SEC</div>
+          </div>
+        </div>
+
+        <p class="text-gray-400 mt-6 text-sm italic">
+          เริ่มลงมือจริง 21/01/2569 เวลา 07:00 น.
+        </p>
+      </div>
+
+      <!-- ที่เหลือยังคงเดิม -->
+      <div class="bg-zinc-900 border-l-8 border-orange-500 p-8">
+        <h3 class="text-2xl font-black mb-3 text-orange-500 uppercase">
+          02. Coming soon
+        </h3>
+        <p class="text-gray-300">not now</p>
+      </div>
+
+      <div class="bg-zinc-900 border-l-8 border-white p-8">
+        <h3 class="text-2xl font-black mb-3 uppercase">
+          03. Coming soon
+        </h3>
+        <p class="text-gray-300">not now</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="bg-black py-12 border-t border-zinc-800 text-center">
+  <p class="font-black text-2xl mb-2 italic">
+    VOTE <span class="text-red-600">SUCSEED</span> #1
+  </p>
+  <p class="text-zinc-600 text-sm uppercase tracking-widest">
+    Student Council 2026
+  </p>
+</footer>
+
+<!-- COUNTDOWN SCRIPT -->
+<script>
+const target = new Date("2026-01-21T07:00:00+07:00").getTime();
+
+setInterval(()=>{
+  const now = new Date().getTime();
+  let diff = target - now;
+  if(diff < 0) diff = 0;
+
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor(diff / (1000*60*60) % 24);
+  const m = Math.floor(diff / (1000*60) % 60);
+  const s = Math.floor(diff / 1000 % 60);
+
+  document.getElementById("d").innerText = d;
+  document.getElementById("h").innerText = h;
+  document.getElementById("m").innerText = m;
+  document.getElementById("s").innerText = s;
+},1000);
+</script>
+
 </body>
 </html>
