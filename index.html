@@ -3,120 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucseed | พรรคสภานักเรียน</title>
+    <title>SUCSEED | สวนกุหลาบวิทยาลัย ชลบุรี</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Kanit', sans-serif; background-color: #f8faff; }
+        body { 
+            font-family: 'Kanit', sans-serif; 
+            background-color: #000000; 
+            color: white;
+            scroll-behavior: smooth;
+        }
         
-        /* สีม่วงแบบในรูป */
-        .bg-purple-main { background-color: #5d46e7; }
-        .text-purple-main { color: #5d46e7; }
-        .bg-purple-light { background-color: #f0f3ff; }
-        
+        /* สไตล์สีตามรูป SUCSEED */
+        .color-red { color: #e11d48; }
+        .bg-red-main { background-color: #e11d48; }
+        .bg-orange-accent { background-color: #f97316; }
+        .border-grunge { border: 4px solid #fff; box-shadow: 5px 5px 0px #e11d48; }
+
+        /* พื้นหลังแบบมี Texture เล็กน้อย */
+        .grunge-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
+        }
+
         /* Modal Style */
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(8px); }
-        .modal-content { animation: slideUp 0.4s ease-out; }
-        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(10px); }
+        .modal-content { animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        @keyframes popIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+        /* เอฟเฟกต์ปุ่มและบัตร */
+        .member-card:hover { transform: translateY(-10px) rotate(1deg); transition: all 0.3s; }
     </style>
 </head>
-<body class="text-slate-800">
+<body class="grunge-bg">
 
-    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-lg border-b border-gray-100">
+    <nav class="fixed w-full z-50 bg-black/90 border-b-2 border-red-600">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-purple-main rounded-lg flex items-center justify-center text-white font-bold">S</div>
-                <span class="text-xl font-bold text-slate-900 tracking-tight">SUCSEED 2026</span>
+            <div class="flex items-center gap-3">
+                <div class="bg-red-600 text-white font-black px-2 py-1 italic text-2xl">S</div>
+                <span class="text-xl font-black tracking-tighter italic">SUCSEED <span class="text-red-600">2026</span></span>
             </div>
-            <ul class="hidden md:flex space-x-10 text-slate-600 font-medium">
-                <li><a href="#home" class="hover:text-purple-main transition">หน้าหลัก</a></li>
-                <li><a href="#team" class="hover:text-purple-main transition">สมาชิก</a></li>
-                <li><a href="#policy" class="hover:text-purple-main transition">นโยบาย</a></li>
+            <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase">
+                <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
+                <li><a href="#team" class="hover:text-red-500 transition">Team</a></li>
+                <li><a href="#policy" class="hover:text-red-500 transition">Policy</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="pt-40 pb-20 px-6 text-center">
-        <div class="container mx-auto">
-            <h2 class="text-purple-main font-bold tracking-widest mb-3 uppercase">พรรคเบอร์ 1</h2>
-            <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6">เพราะเราคือ <span class="text-purple-main">SUCSEED</span></h1>
-            <p class="text-slate-500 text-lg max-w-xl mx-auto italic">"ไม่พูดให้จำ เดี๋ยวทำให้ดู"</p>
+    <section id="home" class="pt-48 pb-20 px-6 relative overflow-hidden">
+        <div class="absolute top-20 right-[-50px] opacity-20 text-[15rem] font-black italic select-none">SUCSEED</div>
+        <div class="container mx-auto text-center relative z-10">
+            <h2 class="bg-red-600 text-white inline-block px-4 py-1 font-bold mb-4 skew-x-[-10deg]">เบอร์ 1 | COMING SOON</h2>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter">
+                สร้างสรรค์โรงเรียน <br>
+                <span class="text-transparent" style="-webkit-text-stroke: 2px white;">ให้เป็นบ้านที่น่าอยู่</span>
+            </h1>
+            <p class="max-w-xl mx-auto text-gray-400 text-lg mb-8 font-light italic">
+                "ไม่พูดให้จำ เดี๋ยวทำให้ดู" — พร้อมเปลี่ยนสวนกุหลาบชลบุรีให้ก้าวหน้ากว่าที่เคย
+            </p>
+            <a href="#policy" class="bg-white text-black px-10 py-3 font-black uppercase hover:bg-red-600 hover:text-white transition-all inline-block">อ่านนโยบาย</a>
         </div>
     </section>
 
-    <section id="team" class="py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
+    <section id="team" class="py-20 bg-zinc-950/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-black text-center mb-16 italic underline decoration-red-600">OUR SQUAD</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-end">
                 
-                <div onclick="openModal('https://via.placeholder.com/600', 'สมชาย ใจดี', 'รองประธานคนที่ 1', 'ดูแลความเรียบร้อยและประสานงานภายในทีม')" 
-                     class="bg-purple-light p-10 rounded-[2rem] text-center shadow-sm hover:shadow-xl transition-all cursor-pointer border border-white h-[350px] flex flex-col justify-center">
-                    <div class="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-6 border-4 border-white shadow-md overflow-hidden">
-                        <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600x800', 'สมชาย ใจดี', 'รองประธานคนที่ 1', 'พร้อมประสานงานทุกฝ่ายให้ลื่นไหล')" class="member-card cursor-pointer group">
+                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
+                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg">สมชาย</h3>
+                        <p class="text-red-500 text-xs font-bold uppercase">รองประธานคนที่ 1</p>
                     </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-1">ชื่อ</h3>
-                    <p class="text-purple-main text-sm font-semibold uppercase tracking-wider">รองประธานนักเรียน</p>
                 </div>
 
-                <div onclick="openModal('https://via.placeholder.com/600', 'สมหญิง รักเรียน', 'เลขานุการ', 'จัดการตารางประชุมและจดบันทึกงานสภา')" 
-                     class="bg-purple-light p-10 rounded-[2rem] text-center shadow-sm hover:shadow-xl transition-all cursor-pointer border border-white h-[350px] flex flex-col justify-center">
-                    <div class="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-6 border-4 border-white shadow-md overflow-hidden">
-                        <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600x800', 'สมหญิง รักเรียน', 'เลขานุการ', 'แม่บ้านประจำทีม จัดการงานเอกสารแม่นยำ')" class="member-card cursor-pointer group">
+                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
+                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg">สมหญิง</h3>
+                        <p class="text-red-500 text-xs font-bold uppercase">เลขานุการสภา</p>
                     </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-1">ชื่อ</h3>
-                    <p class="text-purple-main text-sm font-semibold uppercase tracking-wider">เลขานุการสภา</p>
                 </div>
 
-                <div onclick="openModal('https://via.placeholder.com/600', 'ประธาน พรรค', 'ประธานนักเรียน', 'ผู้นำสูงสุดในการขับเคลื่อนนโยบายเพื่อทุกคน')" 
-                     class="bg-purple-main p-12 rounded-[2.5rem] text-center text-white shadow-2xl transition-all cursor-pointer h-[400px] flex flex-col justify-center transform md:-translate-y-4">
-                    <div class="w-32 h-32 bg-white/20 rounded-full mx-auto mb-6 border-4 border-white/30 shadow-inner overflow-hidden">
-                        <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600x800', 'หัวหน้า ทีมงาน', 'ประธานนักเรียน', 'ผู้นำที่พร้อมรับฟังและลงมือทำจริงเพื่อนักเรียนทุกคน')" class="member-card cursor-pointer group order-first lg:order-none col-span-full lg:col-span-1">
+                    <div class="bg-red-600 p-10 transform lg:-translate-y-8 shadow-[10px_10px_0px_rgba(255,255,255,0.2)] text-center">
+                        <div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden shadow-xl">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-black text-2xl uppercase">ชื่อประธาน</h3>
+                        <p class="text-white text-sm font-bold mb-4 italic underline">ประธานนักเรียน</p>
+                        <p class="text-xs font-bold bg-black text-white py-1">"ACT MORE, TALK LESS"</p>
                     </div>
-                    <h3 class="font-bold text-2xl mb-2">ชื่อ</h3>
-                    <p class="text-purple-100 text-sm mb-4">ประธานนักเรียน</p>
-                    <p class="text-xs font-light italic opacity-80">"กล้าคิด กล้าทำ กล้าเปลี่ยนแปลง"</p>
                 </div>
 
-                <div onclick="openModal('https://via.placeholder.com/600', 'มานะ อดทน', 'เหรัญญิก', 'ดูแลเรื่องงบประมาณและการจัดซื้ออุปกรณ์ต่างๆ')" 
-                     class="bg-purple-light p-10 rounded-[2rem] text-center shadow-sm hover:shadow-xl transition-all cursor-pointer border border-white h-[350px] flex flex-col justify-center">
-                    <div class="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-6 border-4 border-white shadow-md overflow-hidden">
-                        <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600x800', 'เงินทอง มีใช้', 'เหรัญญิก', 'โปร่งใส ตรวจสอบได้ ทุกบาทมีที่มา')" class="member-card cursor-pointer group">
+                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
+                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg">เงินทอง</h3>
+                        <p class="text-red-500 text-xs font-bold uppercase">เหรัญญิก</p>
                     </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-1">ชื่อ</h3>
-                    <p class="text-purple-main text-sm font-semibold uppercase tracking-wider">เหรัญญิก</p>
                 </div>
 
-                <div onclick="openModal('https://via.placeholder.com/600', 'ชูใจ รักดี', 'หัวหน้าฝ่ายกิจกรรม', 'วางแผนและจัดกิจกรรมรื่นเริงในโรงเรียน')" 
-                     class="bg-purple-light p-10 rounded-[2rem] text-center shadow-sm hover:shadow-xl transition-all cursor-pointer border border-white h-[350px] flex flex-col justify-center">
-                    <div class="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-6 border-4 border-white shadow-md overflow-hidden">
-                        <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                <div onclick="openModal('https://via.placeholder.com/600x800', 'กิจกรรม ดีเด่น', 'ฝ่ายกิจกรรม', 'จะงานไหนเราก็จัดเต็ม ความสนุกต้องมาอันดับหนึ่ง')" class="member-card cursor-pointer group">
+                    <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center">
+                        <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden">
+                            <img src="https://via.placeholder.com/150" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg">กิจกรรม</h3>
+                        <p class="text-red-500 text-xs font-bold uppercase">ฝ่ายกิจกรรม</p>
                     </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-1">ชื่อ</h3>
-                    <p class="text-purple-main text-sm font-semibold uppercase tracking-wider">ฝ่ายกิจกรรม</p>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section id="policy" class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-black mb-12 text-center italic"><span class="bg-white text-black px-4">THE POLICY</span></h2>
+            <div class="space-y-6">
+                <div class="bg-zinc-900 border-l-8 border-red-600 p-8 hover:bg-zinc-800 transition shadow-lg">
+                    <h3 class="text-2xl font-black mb-3 text-red-600 uppercase">01. พื้นที่อิสระ (Free Space)</h3>
+                    <p class="text-gray-300">เปิดโอกาสให้นักเรียนใช้พื้นที่ในโรงเรียนจัดกิจกรรมดนตรี ศิลปะ หรือตลาดนัดมือสองในช่วงพักกลางวัน เพื่อส่งเสริมความคิดสร้างสรรค์</p>
+                </div>
+                <div class="bg-zinc-900 border-l-8 border-orange-500 p-8 hover:bg-zinc-800 transition shadow-lg">
+                    <h3 class="text-2xl font-black mb-3 text-orange-500 uppercase">02. ระบบร้องเรียนออนไลน์ (Direct Box)</h3>
+                    <p class="text-gray-300">แจ้งปัญหาห้องน้ำชำรุด หรือข้อเสนอแนะผ่านระบบ QR Code ที่ตรวจสอบสถานะได้จริง ไม่มีการดองเรื่อง</p>
+                </div>
+                <div class="bg-zinc-900 border-l-8 border-white p-8 hover:bg-zinc-800 transition shadow-lg">
+                    <h3 class="text-2xl font-black mb-3 text-white uppercase">03. สวัสดิการนักเรียน (Student Welfare)</h3>
+                    <p class="text-gray-300">จัดหาผ้าอนามัยฟรีในห้องน้ำหญิง และเพิ่มจุดบริการน้ำดื่มที่สะอาดทั่วถึงทุกอาคารเรียน</p>
+                </div>
             </div>
         </div>
     </section>
 
     <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
-        <div class="modal-content bg-white rounded-[3rem] max-w-md w-full overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
-            <div class="p-2">
-                <img id="modalImg" src="" class="w-full h-72 object-cover rounded-[2.5rem]">
-            </div>
-            <div class="p-10 text-center">
-                <h3 id="modalName" class="text-3xl font-bold text-slate-900 mb-2"></h3>
-                <p id="modalRole" class="text-purple-main font-bold mb-6 tracking-widest uppercase text-sm"></p>
-                <p id="modalDesc" class="text-slate-500 leading-relaxed"></p>
-                <button onclick="closeModal()" class="mt-8 w-full py-4 bg-slate-100 rounded-2xl font-bold text-slate-600 hover:bg-purple-main hover:text-white transition">ปิดหน้าต่าง</button>
+        <div class="modal-content bg-zinc-900 border-4 border-white max-w-md w-full overflow-hidden relative shadow-[20px_20px_0px_#e11d48]" onclick="event.stopPropagation()">
+            <img id="modalImg" src="" class="w-full h-96 object-cover grayscale hover:grayscale-0 transition duration-500">
+            <div class="p-8">
+                <h3 id="modalName" class="text-4xl font-black italic uppercase text-white mb-1"></h3>
+                <p id="modalRole" class="text-red-600 font-bold mb-4 tracking-tighter italic"></p>
+                <div class="h-1 bg-white w-20 mb-4"></div>
+                <p id="modalDesc" class="text-gray-400 font-light"></p>
+                <button onclick="closeModal()" class="mt-8 w-full py-2 bg-red-600 text-white font-black hover:bg-white hover:text-black transition">CLOSE</button>
             </div>
         </div>
     </div>
 
-    <footer class="py-12 text-center text-slate-400 text-sm">
-        <p>&copy; 2026 SUCSEED Student Council Team</p>
+    <footer class="bg-black py-12 border-t border-zinc-800 text-center">
+        <p class="font-black italic text-2xl mb-2 italic">VOTE <span class="text-red-600">SUCSEED</span> #1</p>
+        <p class="text-zinc-600 text-sm tracking-widest uppercase">Suankularb Wittayalai Chonburi | Student Council 2026</p>
     </footer>
 
     <script>
+        // ระบบเปิด-ปิด Modal ข้อมูลสมาชิก
         function openModal(imgSrc, name, role, desc) {
             document.getElementById('modalImg').src = imgSrc;
             document.getElementById('modalName').innerText = name;
@@ -129,22 +178,26 @@
             document.getElementById('infoModal').style.display = 'none';
         }
 
-        // หัวใจ
+        // เอฟเฟกต์คลิกแล้วมีสัญลักษณ์พรรคเด้งขึ้นมา
         document.addEventListener('click', function(e) {
-            if (e.target.closest('.cursor-pointer') || e.target.closest('nav')) return;
-            const heart = document.createElement('div');
-            heart.innerHTML = '💜';
-            heart.style.position = 'fixed';
-            heart.style.left = (e.clientX - 10) + 'px';
-            heart.style.top = (e.clientY - 10) + 'px';
-            heart.style.pointerEvents = 'none';
-            heart.style.transition = 'all 0.8s ease-out';
-            document.body.appendChild(heart);
+            if (e.target.closest('.member-card') || e.target.closest('nav') || e.target.closest('button')) return;
+            const star = document.createElement('div');
+            star.innerHTML = '★';
+            star.style.color = '#e11d48';
+            star.style.position = 'fixed';
+            star.style.left = (e.clientX - 10) + 'px';
+            star.style.top = (e.clientY - 10) + 'px';
+            star.style.fontSize = '24px';
+            star.style.fontWeight = 'black';
+            star.style.pointerEvents = 'none';
+            star.style.zIndex = '1000';
+            star.style.transition = 'all 0.6s ease-out';
+            document.body.appendChild(star);
             setTimeout(() => {
-                heart.style.transform = 'translateY(-60px) scale(1.5)';
-                heart.style.opacity = '0';
+                star.style.transform = 'translateY(-100px) rotate(360deg) scale(2)';
+                star.style.opacity = '0';
             }, 10);
-            setTimeout(() => heart.remove(), 800);
+            setTimeout(() => star.remove(), 600);
         });
     </script>
 </body>
