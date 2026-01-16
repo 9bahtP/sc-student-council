@@ -64,8 +64,44 @@
 
   </div>
 </nav>
+<script>// --- ส่วนของระบบสุ่มดวง ---
+function shakeFortune() {
+    const card = document.getElementById('fortune-card');
+    const btn = document.getElementById('fortuneBtn');
+    
+    if (navigator.vibrate) navigator.vibrate([50, 30, 50]);
+    btn.innerText = "กำลังเขย่า...";
+    
+    const results = [
+        { t: "ดีเยี่ยม", d: "วันนี้ดวงพุ่งแรง! จะทำงานส่งทันเวลา และไม่มีการบ้านค้าง" },
+        { t: "ปานกลาง", d: "ชีวิตราบรื่น แต่อย่าลืมเช็คชื่อในคาบเช้า ระวังจะสาย!" },
+        { t: "มหาเฮง", d: "มีเกณฑ์จะได้เจอคนที่แอบชอบในโรงเรียนแบบไม่ตั้งตัว" },
+        { t: "พอใช้", d: "วันนี้ควรงดเถลไถล รีบกลับบ้านไปปั่นงาน ชีวิตจะรุ่ง" },
+        { t: "ดวงแข็ง", d: "ครูจะสุ่มเลขที่ตอบคำถาม แต่คุณจะรอดพ้นอย่างปาฏิหาริย์" }
+    ];
 
+    const rand = results[Math.floor(Math.random() * results.length)];
 
+    setTimeout(() => {
+        btn.innerText = "เขย่าอีกครั้ง!";
+        card.classList.remove('hidden', 'scale-0');
+        card.classList.add('scale-100');
+        
+        document.getElementById('fortune-title').innerText = rand.t;
+        document.getElementById('fortune-desc').innerText = rand.d;
+
+        // ถ้าคุณมี CDN Confetti อยู่แล้วมันจะจุดพลุให้ครับ
+        if (typeof confetti === "function") {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.8 },
+                colors: ['#e11d48', '#000000', '#ffffff']
+            });
+        }
+    }, 600);
+}
+</script>
 
 
     <section id="home" class="pt-48 pb-20 px-6 relative overflow-hidden">
@@ -207,6 +243,24 @@
                 
                 
     </section>
+                <section id="fortune" class="py-16 bg-zinc-900 border-y-4 border-red-600 text-center">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-black italic mb-2 uppercase">SUCSEED <span class="text-red-600">FORTUNE</span></h2>
+        <p class="mb-8 text-gray-400 text-sm italic">เขย่าเซียมซีดูดวงชะตาในสวนชลวันนี้!</p>
+        
+        <button onclick="shakeFortune()" id="fortuneBtn" class="bg-white text-black px-10 py-4 font-black uppercase shadow-[6px_6px_0px_#e11d48] active:translate-y-1 active:shadow-none transition-all hover:bg-red-600 hover:text-white">
+            เขย่าเซียมซี 🧧
+        </button>
+
+        <div id="fortune-card" class="hidden mt-10 p-8 bg-white text-black max-w-xs mx-auto border-8 border-black -rotate-1 scale-0 transition-all duration-500 shadow-2xl">
+            <p id="fortune-head" class="text-[10px] font-black uppercase bg-red-600 text-white inline-block px-2 mb-2">ใบเซียมซี</p>
+            <h3 id="fortune-title" class="text-3xl font-black mb-2 uppercase tracking-tighter"></h3>
+            <p id="fortune-desc" class="text-base font-bold italic leading-tight text-gray-700"></p>
+            <hr class="my-4 border-gray-300">
+            <p class="text-[10px] font-bold text-red-600 uppercase">SUCSEED 2026 - No Talk Just Act</p>
+        </div>
+    </div>
+</section>
 
     <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
         <div class="modal-content bg-zinc-900 border-4 border-white max-w-md w-full overflow-hidden relative shadow-[20px_20px_0px_#e11d48]" onclick="event.stopPropagation()">
