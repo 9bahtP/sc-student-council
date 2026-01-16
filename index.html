@@ -36,7 +36,41 @@
 </head>
 
 <body class="grunge-bg">
+<div id="mascot" class="fixed bottom-10 left-[-100px] z-[99] transition-all duration-[3000ms] ease-linear pointer-events-none">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJicnN6ZzRyeHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZ2VudGlmeSZjdD1z/3o7TKMGpxx6B3DpXvq/giphy.gif" 
+         class="w-24 h-24 md:w-32 md:h-32 object-contain" alt="walking mascot">
+    
+    <div class="absolute -top-10 left-10 bg-white text-black text-[10px] px-2 py-1 rounded-full font-bold border-2 border-black whitespace-nowrap">
+        เลือกเบอร์ 1 นะครับ! ✌️
+    </div>
+</div>
 
+<script>
+    function moveMascot() {
+        const mascot = document.getElementById('mascot');
+        const screenWidth = window.innerWidth;
+        
+        // สุ่มตำแหน่งใหม่ (ให้เดินจากซ้ายไปขวา หรือขวาไปซ้าย)
+        const randomX = Math.random() * (screenWidth + 200) - 100;
+        
+        // ถ้าเดินไปทางขวา ให้รูปหันขวา ถ้าไปทางซ้าย ให้กลับด้านรูป
+        if (randomX > parseInt(mascot.style.left)) {
+            mascot.style.transform = 'scaleX(1)'; // หันขวา
+        } else {
+            mascot.style.transform = 'scaleX(-1)'; // หันซ้าย (Flip)
+        }
+        
+        mascot.style.left = randomX + 'px';
+        
+        // สุ่มเวลาที่จะเดินครั้งต่อไป (3-7 วินาที)
+        setTimeout(moveMascot, Math.random() * 4000 + 3000);
+    }
+
+    // เริ่มให้เดินหลังจากโหลดหน้าเว็บ
+    window.onload = () => {
+        moveMascot();
+    };
+</script>
   <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 border-b-2 border-red-600">
   <div class="w-full px-6 sm:px-10 py-4 flex justify-between items-center">
     
