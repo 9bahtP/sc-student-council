@@ -192,20 +192,22 @@
 <section id="voice" class="py-20 bg-zinc-950 border-y-2 border-red-600">
     <div class="container mx-auto max-w-3xl px-6 text-center">
         <h2 class="text-4xl font-black uppercase text-white mb-2 italic">YOUR VOICE <span class="text-red-600">MATTERS</span></h2>
-        <p class="text-zinc-500 mb-8 font-bold">มีอะไรอยากบ่น อยากแนะ หรืออยากให้แก้? ส่งตรงถึงพรรคเบอร์ 1 ได้เลย (ไม่ต้องระบุชื่อ)</p>
-        <div class="bg-black border border-zinc-800 p-8 shadow-[10px_10px_0px_#e11d48]">
+        <p class="text-zinc-500 mb-8 font-bold">มีอะไรอยากบอกพรรคเบอร์ 1 ส่งมาได้เลย (ข้อมูลจะส่งตรงเข้าเมลเจ้าของพรรค)</p>
+        
+        <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="bg-black border border-zinc-800 p-8 shadow-[10px_10px_0px_#e11d48]">
             <div class="mb-4 text-left">
-                <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">Topic / เรื่องที่อยากบอก</label>
-                <input type="text" placeholder="เช่น แอร์ไม่เย็น, ข้าวแพง..." class="w-full bg-zinc-900 border border-zinc-700 text-white p-3 focus:outline-none focus:border-red-600 font-bold">
+                <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">หัวข้อเรื่อง</label>
+                <input type="text" name="subject" placeholder="เช่น แอร์ไม่เย็น, ข้าวแพง..." required class="w-full bg-zinc-900 border border-zinc-700 text-white p-3 focus:outline-none focus:border-red-600 font-bold">
             </div>
             <div class="mb-6 text-left">
-                <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">Details / รายละเอียด</label>
-                <textarea rows="3" placeholder="ระบายมาได้เลย..." class="w-full bg-zinc-900 border border-zinc-700 text-white p-3 focus:outline-none focus:border-red-600 font-bold"></textarea>
+                <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">รายละเอียด</label>
+                <textarea name="message" rows="3" placeholder="พิมพ์ข้อความที่นี่..." required class="w-full bg-zinc-900 border border-zinc-700 text-white p-3 focus:outline-none focus:border-red-600 font-bold"></textarea>
             </div>
-            <button onclick="alert('ขอบคุณสำหรับเสียงของคุณ! (ระบบ Demo: กรุณาเชื่อมต่อ Google Sheets เพื่อใช้งานจริง)')" class="w-full bg-red-600 text-white font-black uppercase py-4 hover:bg-white hover:text-red-600 transition-colors">
-                SEND MESSAGE 🚀
+            
+            <button type="submit" class="w-full bg-red-600 text-white font-black uppercase py-4 hover:bg-white hover:text-red-600 transition-colors">
+                SEND TO EMAIL ✉️
             </button>
-        </div>
+        </form>
     </div>
 </section>
 
