@@ -16,7 +16,7 @@
         }
         
         .grunge-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
         }
 
         .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); backdrop-filter: blur(5px); }
@@ -28,7 +28,7 @@
         .member-card:hover { transform: translateY(-10px); z-index: 10; }
         .member-card:active { transform: scale(0.95); }
         
-        /* Glitch Effect for Full Team Button */
+        /* Glitch Effect */
         @keyframes glitch-skew {
             0% { transform: skew(0deg); }
             20% { transform: skew(-2deg); }
@@ -56,7 +56,7 @@
         }
         .ticker-text {
             display: inline-block;
-            animation: ticker 25s linear infinite;
+            animation: ticker 30s linear infinite;
             font-weight: 900;
             text-transform: uppercase;
             font-style: italic;
@@ -65,6 +65,11 @@
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+
+        /* Policy Card Hover */
+        .policy-card:hover .policy-icon { transform: scale(1.2) rotate(-10deg); color: #e11d48; }
+        .policy-card { transition: all 0.3s ease; }
+        .policy-card:hover { border-color: #e11d48; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(225, 29, 72, 0.3); }
     </style>
 </head>
 
@@ -85,7 +90,7 @@
 
 <div class="fixed top-[74px] left-0 w-full z-[45] ticker-wrapper">
     <div class="ticker-text uppercase tracking-widest text-sm">
-        SUCSEED NEWS : เข้าคูหากาเบอร์ 1  ——— เตรียมตัวพบกับกิจกรรมดีๆจากพวกเราได้เลย ——— VOTE NO.1 FOR REAL CHANGE ——— อย่าลืมเขย่าเซียมซีลุ้นดวงการเรียนด้านล่างหน้าเว็บ !
+        SUCSEED NEWS : เข้าคูหากาเบอร์ 1  ——— เตรียมตัวพบกับกิจกรรมดีๆจากพวกเราได้เลย ——— VOTE NO.1 FOR REAL CHANGE ——— อย่าลืมเขย่าเซียมซีลุ้นดวงการเรียนด้านล่างหน้าเว็บ ! ——— แจกฟรี Wallpaper มือถือลายพรรค ด้านล่างสุด!
     </div>
 </div>
 
@@ -100,11 +105,11 @@
             </span>
         </div>
        
-
         <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase shrink-0 items-center">
             <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
             <li><a href="#team" class="hover:text-red-500 transition">Team</a></li>
             <li><a href="#policy" class="hover:text-red-500 transition">Policy</a></li>
+            <li><a href="#voice" class="hover:text-red-500 transition">Voice Box</a></li>
             <li><a href="#qna" class="hover:text-red-500 transition text-red-500">Q&A</a></li>
             <li><a href="https://9bahtp.github.io/sc-student-council-member/" class="bg-red-600 px-4 py-1.5 text-white hover:bg-white hover:text-red-600 transition-all border border-white skew-x-[-10deg] font-black">FULL TEAM</a></li>
         </ul>
@@ -114,7 +119,7 @@
 <section id="home" class="pt-56 pb-20 px-6 relative overflow-hidden">
     <div class="absolute top-20 right-[-50px] opacity-20 text-[15rem] font-black italic select-none">SUCSEED</div>
     <div class="container mx-auto text-center relative z-10">
-        <h2 class="bg-red-600 text-white inline-block px-4 py-1 font-bold mb-4 skew-x-[-10deg]">เบอร์ 1 | SUCSEED</h2>
+        <h2 class="bg-red-600 text-white inline-block px-4 py-1 font-bold mb-4 skew-x-[-10deg] shadow-[4px_4px_0px_white]">เบอร์ 1 | SUCSEED</h2>
         <h1 class="text-6xl md:text-8xl font-black mb-6 italic tracking-tighter">
             สร้างสรรค์โรงเรียน <br>
             <span class="text-transparent" style="-webkit-text-stroke: 2px white;">ให้เป็นบ้านที่น่าอยู่</span>
@@ -150,20 +155,14 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-end mb-12">
-            
             <div onclick="openModal('https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC', 'นายธาวา พัชรนรากุล', 'รองประธาน', 'กำขี้ ดีกว่า กำตด')" 
                  class="member-card cursor-pointer group order-2 lg:order-1 relative">
                 <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative overflow-hidden">
                     <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
                         <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-[8px] font-black bg-white text-black px-1">VIEW</span>
-                        </div>
                     </div>
-                    <div class="absolute top-2 right-2 text-zinc-600 group-hover:text-red-600 transition-colors">✚</div>
                     <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">โตโน่</h3>
                     <p class="text-zinc-500 text-xs font-bold uppercase">รองประธาน</p>
-                    <p class="text-[9px] text-red-600 mt-2 font-bold border border-red-600 inline-block px-2 rounded-full opacity-50 group-hover:opacity-100">Click Info</p>
                 </div>
             </div>
 
@@ -172,14 +171,9 @@
                 <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative">
                     <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
                         <img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BqpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-[8px] font-black bg-white text-black px-1">VIEW</span>
-                        </div>
                     </div>
-                    <div class="absolute top-2 right-2 text-zinc-600 group-hover:text-red-600 transition-colors">✚</div>
                     <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">จูน</h3>
                     <p class="text-zinc-500 text-xs font-bold uppercase">เลขานุการสภา</p>
-                    <p class="text-[9px] text-red-600 mt-2 font-bold border border-red-600 inline-block px-2 rounded-full opacity-50 group-hover:opacity-100">Click Info</p>
                 </div>
             </div>
 
@@ -189,13 +183,10 @@
                     <div class="absolute top-3 right-3 animate-bounce">👆</div>
                     <div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden shadow-xl relative">
                         <img src="https://scontent.fbkk29-7.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwEA7Sgk&_nc_oc=Adl87gBK3jWS45AB3_u3XDCvNG_TMRADzXz2_yd6HdOpE7Wy6JgKDgtbwkUUFUWixNw&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-7.fna&oh=03_Q7cD4QGj4AOtX4_Y_wphF5fwZ2tAHJV9XAblR9LovsEC_51NKA&oe=69927C7F" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-sm font-black text-white border-2 border-white px-2 py-1 uppercase -skew-x-12">View Profile</span>
-                        </div>
                     </div>
                     <h3 class="font-black text-2xl uppercase group-hover:text-black">หยก</h3>
                     <p class="text-white text-sm font-bold mb-4 italic underline group-hover:text-red-600">ประธานนักเรียน</p>
-                    <p class="text-xs font-bold bg-black text-white py-2 px-4 uppercase tracking-tighter inline-block shadow-lg group-hover:scale-105 transition-transform">Tap For Info</p>
+                    <p class="text-xs font-bold bg-black text-white py-2 px-4 uppercase tracking-tighter inline-block shadow-lg">Tap For Info</p>
                 </div>
             </div>
 
@@ -204,14 +195,9 @@
                 <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative">
                     <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
                         <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwFpDRNt&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-[8px] font-black bg-white text-black px-1">VIEW</span>
-                        </div>
                     </div>
-                    <div class="absolute top-2 right-2 text-zinc-600 group-hover:text-red-600 transition-colors">✚</div>
                     <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">คิว</h3>
                     <p class="text-zinc-500 text-xs font-bold uppercase">ฝ่ายสถานที่</p>
-                    <p class="text-[9px] text-red-600 mt-2 font-bold border border-red-600 inline-block px-2 rounded-full opacity-50 group-hover:opacity-100">Click Info</p>
                 </div>
             </div>
 
@@ -220,14 +206,9 @@
                 <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative">
                     <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
                         <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-[8px] font-black bg-white text-black px-1">VIEW</span>
-                        </div>
                     </div>
-                    <div class="absolute top-2 right-2 text-zinc-600 group-hover:text-red-600 transition-colors">✚</div>
                     <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">เอมี่</h3>
                     <p class="text-zinc-500 text-xs font-bold uppercase">ฝ่ายกิจกรรม</p>
-                    <p class="text-[9px] text-red-600 mt-2 font-bold border border-red-600 inline-block px-2 rounded-full opacity-50 group-hover:opacity-100">Click Info</p>
                 </div>
             </div>
         </div>
@@ -235,7 +216,6 @@
         <div class="mt-20">
             <a href="https://9bahtp.github.io/sc-student-council-member/" class="glitch-hover block relative group overflow-hidden border-4 border-white bg-black transform hover:-translate-y-2 transition-all duration-300 shadow-[10px_10px_0px_#e11d48]">
                 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
-                
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 py-8 md:px-12 md:py-10">
                     <div class="text-center md:text-left mb-4 md:mb-0">
                         <h3 class="text-3xl md:text-5xl font-black italic uppercase text-white tracking-tighter leading-none group-hover:text-red-600 transition-colors">
@@ -243,56 +223,80 @@
                         </h3>
                         <p class="text-xs md:text-sm text-zinc-400 mt-2 font-bold tracking-[0.3em] uppercase">กดเพื่อดูสมาชิกของเราทั้งหมด👉👉</p>
                     </div>
-                    
                     <div class="flex items-center gap-4">
                         <span class="hidden md:block text-red-600 font-black text-xl italic uppercase group-hover:mr-4 transition-all">Go to page</span>
-                        <div class="bg-red-600 text-white w-16 h-16 flex items-center justify-center font-black text-3xl rotate-[-10deg] group-hover:rotate-0 transition-transform">
-                            ➜
-                        </div>
+                        <div class="bg-red-600 text-white w-16 h-16 flex items-center justify-center font-black text-3xl rotate-[-10deg] group-hover:rotate-0 transition-transform">➜</div>
                     </div>
                 </div>
-                
-                <div class="absolute inset-0 bg-white mix-blend-overlay opacity-0 group-hover:opacity-20 transition-opacity duration-100"></div>
             </a>
         </div>
-
     </div>
 </section>
+
 <section id="policy" class="py-20 bg-black relative">
     <div class="container mx-auto px-6">
         <div class="mb-16 text-center">
             <h3 class="text-white text-xl font-black italic mb-6 tracking-widest uppercase">
-                <span class="text-red-600 animate-pulse">●</span> Countdown for the policy
+                <span class="text-red-600 animate-pulse">●</span> COUNTDOWN TO ELECTION DAY
             </h3>
             
-            <div class="flex justify-center gap-4 md:gap-8 text-white">
-                <div class="flex flex-col">
-                    <div id="days" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Days</span>
-                </div>
-                <div class="flex flex-col">
-                    <div id="hours" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Hours</span>
-                </div>
-                <div class="flex flex-col">
-                    <div id="minutes" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Mins</span>
-                </div>
-                <div class="flex flex-col">
-                    <div id="seconds" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Secs</span>
-                </div>
+            <div class="flex justify-center gap-4 md:gap-8 text-white mb-16">
+                <div class="flex flex-col"><div id="days" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div><span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Days</span></div>
+                <div class="flex flex-col"><div id="hours" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div><span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Hours</span></div>
+                <div class="flex flex-col"><div id="minutes" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div><span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Mins</span></div>
+                <div class="flex flex-col"><div id="seconds" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div><span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Secs</span></div>
             </div>
             
-            <p class="mt-10 text-zinc-500 font-bold italic uppercase tracking-[0.3em]">เตรียมตัวพบกับสวนชลเวอร์ชันใหม่</p>
+            <h2 class="text-5xl font-black italic uppercase text-white mb-10"><span class="text-red-600">KEY</span> POLICIES</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black transition-all">01</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500">ห้องน้ำต้องดีกว่านี้</h4>
+                <p class="text-zinc-400 text-sm">เราจะผลักดันงบประมาณซ่อมแซมและปรับปรุงความสะอาดห้องน้ำทุกตึก พร้อมสบู่และกระดาษชำระที่เพียงพอ ไม่ต้องอั้นอีกต่อไป</p>
             </div>
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black transition-all">02</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500">Wi-Fi จุดสำคัญ</h4>
+                <p class="text-zinc-400 text-sm">ขยายจุดสัญญาณ Wi-Fi บริเวณโรงอาหารและใต้อาคารเรียน เพื่อให้ทุกคนเข้าถึงแหล่งข้อมูล (และเกม) ได้อย่างลื่นไหล</p>
+            </div>
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black transition-all">03</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500">E-Sports League</h4>
+                <p class="text-zinc-400 text-sm">จัดตั้งการแข่งขัน E-Sports ประจำปีของโรงเรียนอย่างเป็นทางการ เพื่อเปิดพื้นที่ให้คนมีของได้โชว์ฝีมือ</p>
+            </div>
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black transition-all">04</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500">เพิ่มพื้นที่พักผ่อน</h4>
+                <p class="text-zinc-400 text-sm">ปรับปรุงพื้นที่ว่างใต้อาคารให้มีที่นั่งเพียงพอ สำหรับนั่งรอผู้ปกครอง นั่งทำการบ้าน หรือนั่งคุยกับเพื่อน</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="qna" class="py-20 bg-zinc-950 border-y-2 border-zinc-800">
+<section id="voice" class="py-20 bg-zinc-950 border-y-2 border-red-600">
+    <div class="container mx-auto max-w-3xl px-6 text-center">
+        <h2 class="text-4xl font-black uppercase text-white mb-2 italic">YOUR VOICE <span class="text-red-600">MATTERS</span></h2>
+        <p class="text-zinc-500 mb-8 font-bold">มีอะไรอยากบ่น อยากแนะ หรืออยากให้แก้? ส่งตรงถึงพรรคเบอร์ 1 ได้เลย (ไม่ต้องระบุชื่อ)</p>
+        
+        <div class="bg-black border border-zinc-800 p-8 shadow-[10px_10px_0px_#e11d48]">
+            <div class="mb-4 text-left">
+                <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">Topic / เรื่องที่อยากบอก</label>
+                <input type="text" placeholder="เช่น แอร์ไม่เย็น, ข้าวแพง..." class="w-full bg-zinc-900 border border-zinc-700 text-white p-3 focus:outline-none focus:border-red-600 font-bold">
+            </div>
+            <div class="mb-6 text-left">
+                <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">Details / รายละเอียด</label>
+                <textarea rows="3" placeholder="ระบายมาได้เลย..." class="w-full bg-zinc-900 border border-zinc-700 text-white p-3 focus:outline-none focus:border-red-600 font-bold"></textarea>
+            </div>
+            <button onclick="alert('ขอบคุณสำหรับเสียงของคุณ! เราได้รับข้อความแล้ว')" class="w-full bg-red-600 text-white font-black uppercase py-4 hover:bg-white hover:text-red-600 transition-colors">
+                SEND MESSAGE 🚀
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="qna" class="py-20 bg-black">
     <div class="container mx-auto max-w-4xl px-6">
         <h2 class="text-3xl font-black mb-10 italic uppercase text-red-600">Why Vote <span class="text-white">SUCSEED?</span></h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -308,7 +312,24 @@
     </div>
 </section>
 
-<section class="py-20 px-6">
+<section class="py-16 bg-zinc-900 text-center border-t border-zinc-800">
+    <div class="container mx-auto px-6">
+        <h3 class="text-2xl font-black italic uppercase text-white mb-8">DIGITAL <span class="text-transparent" style="-webkit-text-stroke: 1px white;">SWAG</span></h3>
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="bg-black border border-white text-white px-6 py-3 font-bold uppercase hover:bg-white hover:text-black transition flex items-center gap-2">
+                📱 Phone Wallpaper
+            </button>
+            <button class="bg-black border border-white text-white px-6 py-3 font-bold uppercase hover:bg-white hover:text-black transition flex items-center gap-2">
+                💻 Desktop Wallpaper
+            </button>
+            <button class="bg-black border border-white text-white px-6 py-3 font-bold uppercase hover:bg-white hover:text-black transition flex items-center gap-2">
+                📅 Class Schedule Theme
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 px-6 bg-zinc-950">
     <div class="container mx-auto max-w-4xl bg-zinc-900 border-l-8 border-red-600 p-8 shadow-lg">
         <h3 class="text-3xl font-black mb-6 text-white uppercase tracking-tighter italic">KEEP IN <span class="text-red-600">TOUCH</span></h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -345,15 +366,17 @@
     </div>
 </section>
 
-   
-<footer class="bg-black py-12 border-t border-zinc-800 text-center">
-    <p class="font-black italic text-2xl mb-2">VOTE <span class="text-red-600 text-3xl">SUCSEED</span> #1</p>
-    <p class="text-zinc-600 text-xs tracking-[0.3em] uppercase">Suankularb Wittayalai Chonburi | Student Council 2026</p>
+<footer class="bg-black py-12 border-t border-zinc-800 text-center relative overflow-hidden">
+    <div class="relative z-10">
+        <p class="font-black italic text-2xl mb-2">VOTE <span class="text-red-600 text-3xl">SUCSEED</span> #1</p>
+        <p class="text-zinc-600 text-xs tracking-[0.3em] uppercase mb-4">Suankularb Wittayalai Chonburi | Student Council 2026</p>
+        <p class="text-zinc-800 text-[10px]">Designed by SUCSEED DEV TEAM</p>
+    </div>
 </footer>
 
 <div id="infoModal" class="modal flex items-center justify-center px-4" onclick="closeModal()">
     <div class="modal-content bg-zinc-900 border-4 border-white max-w-md w-full overflow-hidden relative shadow-[20px_20px_0px_#e11d48]" onclick="event.stopPropagation()">
-        <img id="modalImg" src="https://scontent.fbkk29-1.fna.fbcdn.net/v/t1.15752-9/613892652_851669544346220_4082493262980650938_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IAY_ect3HAgQ7kNvwEsuK9H&_nc_oc=AdnsleMkkFAznvv9tLt-U2QcbAz3qCqqS0QnIEQl--v5ACi8a0dAr-gkLFZHzS-RIHs&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-1.fna&oh=03_Q7cD4QEkCk5oWgqPoeq4gFLXj0UnGfBlMVGRZbLzY_iMBiumNQ&oe=699282C2" class="w-full h-96 object-cover grayscale hover:grayscale-0 transition duration-500">
+        <img id="modalImg" src="" class="w-full h-96 object-cover grayscale hover:grayscale-0 transition duration-500">
         <div class="p-8">
             <h3 id="modalName" class="text-4xl font-black italic uppercase text-white mb-1"></h3>
             <p id="modalRole" class="text-red-600 font-bold mb-4 tracking-tighter italic"></p>
@@ -376,6 +399,7 @@
         }, 1500);
     });
 
+    // Fortune Script
     function shakeFortune() {
         const card = document.getElementById('fortune-card');
         const btn = document.getElementById('fortuneBtn');
@@ -404,6 +428,7 @@
         }, 600);
     }
 
+    // Modal Script
     function openModal(imgSrc, name, role, desc) {
         document.getElementById('modalImg').src = imgSrc;
         document.getElementById('modalName').innerText = name;
@@ -415,7 +440,7 @@
 
     // Click Effect
     document.addEventListener('click', function(e) {
-        if (e.target.closest('.member-card') || e.target.closest('nav') || e.target.closest('button')) return;
+        if (e.target.closest('.member-card') || e.target.closest('nav') || e.target.closest('button') || e.target.closest('input') || e.target.closest('textarea')) return;
         const star = document.createElement('div');
         star.innerHTML = '★';
         star.style.cssText = `color:#e11d48; position:fixed; left:${e.clientX-10}px; top:${e.clientY-10}px; font-size:24px; font-weight:black; pointer-events:none; z-index:1000; transition:all 0.6s ease-out;`;
@@ -426,48 +451,39 @@
         }, 10);
         setTimeout(() => star.remove(), 600);
     });
+
+    // Countdown Script
+    function startCountdown() {
+        const electionDate = new Date("January 26, 2026 07:00:00").getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = electionDate - now;
+
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const dEl = document.getElementById("days");
+            const hEl = document.getElementById("hours");
+            const mEl = document.getElementById("minutes");
+            const sEl = document.getElementById("seconds");
+
+            if (dEl && hEl && mEl && sEl) {
+                dEl.innerText = d < 10 ? "0" + d : d;
+                hEl.innerText = h < 10 ? "0" + h : h;
+                mEl.innerText = m < 10 ? "0" + m : m;
+                sEl.innerText = s < 10 ? "0" + s : s;
+            }
+
+            if (distance < 0) {
+                clearInterval(timer);
+                if(dEl) dEl.innerText = "00";
+            }
+        }, 1000);
+    }
+    startCountdown();
 </script>
 
-    <script>// --- ระบบ COUNTDOWN ---
-function startCountdown() {
-    const electionDate = new Date("January 26, 2026 07:00:00").getTime();
-
-    const timer = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = electionDate - now;
-
-        // คำนวณเวลา
-        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const s = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // ดึง Element มาใส่เลข
-        const dEl = document.getElementById("days");
-        const hEl = document.getElementById("hours");
-        const mEl = document.getElementById("minutes");
-        const sEl = document.getElementById("seconds");
-
-        if (dEl && hEl && mEl && sEl) {
-            dEl.innerText = d < 10 ? "0" + d : d;
-            hEl.innerText = h < 10 ? "0" + h : h;
-            mEl.innerText = m < 10 ? "0" + m : m;
-            sEl.innerText = s < 10 ? "0" + s : s;
-        }
-
-        // ถ้าถึงเวลาแล้ว
-        if (distance < 0) {
-            clearInterval(timer);
-            document.getElementById("days").innerText = "00";
-            // ... (ใส่ข้อความจบงานตามต้องการ)
-        }
-    }, 1000);
-}
-
-// สั่งให้เริ่มทำงานทันทีที่โหลดหน้าเว็บ
-startCountdown();</script>
-   
-    
 </body>
 </html>
-
