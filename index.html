@@ -517,16 +517,43 @@ downloadBtn.addEventListener('click', function() {
 // รันตอนโหลดเว็บ
 drawInitialFrame();
     </script>
-    <script>// ตั้งวันที่เลือกตั้งเป็นวันที่ 26 มกราคม 2569 เวลา 08:00 น.
-const electionDate = new Date("January 26, 2026 08:00:00").getTime();
+    <script>// --- ระบบ COUNTDOWN ---
+function startCountdown() {
+    const electionDate = new Date("January 26, 2026 07:00:00").getTime();
 
-const countdown = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = electionDate - now;
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = electionDate - now;
 
-    // คำนวณ วัน, ชม, นาที, วินาที
-    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((distance % (1000 *</script>
+        // คำนวณเวลา
+        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // ดึง Element มาใส่เลข
+        const dEl = document.getElementById("days");
+        const hEl = document.getElementById("hours");
+        const mEl = document.getElementById("minutes");
+        const sEl = document.getElementById("seconds");
+
+        if (dEl && hEl && mEl && sEl) {
+            dEl.innerText = d < 10 ? "0" + d : d;
+            hEl.innerText = h < 10 ? "0" + h : h;
+            mEl.innerText = m < 10 ? "0" + m : m;
+            sEl.innerText = s < 10 ? "0" + s : s;
+        }
+
+        // ถ้าถึงเวลาแล้ว
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("days").innerText = "00";
+            // ... (ใส่ข้อความจบงานตามต้องการ)
+        }
+    }, 1000);
+}
+
+// สั่งให้เริ่มทำงานทันทีที่โหลดหน้าเว็บ
+startCountdown();</script>
 </body>
 </html>
