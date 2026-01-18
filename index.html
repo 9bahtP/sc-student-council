@@ -256,37 +256,24 @@
 
     </div>
 </section>
-<section id="policy" class="py-20 bg-black relative">
-    <div class="container mx-auto px-6">
-        <div class="mb-16 text-center">
-            <h3 class="text-white text-xl font-black italic mb-6 tracking-widest uppercase">
-                <span class="text-red-600 animate-pulse">●</span> Countdown for the policy
-            </h3>
-            
-            <div class="flex justify-center gap-4 md:gap-8 text-white">
-                <div class="flex flex-col">
-                    <div id="days" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Days</span>
-                </div>
-                <div class="flex flex-col">
-                    <div id="hours" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Hours</span>
-                </div>
-                <div class="flex flex-col">
-                    <div id="minutes" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Mins</span>
-                </div>
-                <div class="flex flex-col">
-                    <div id="seconds" class="text-5xl md:text-7xl font-black bg-zinc-900 border-4 border-white w-20 h-24 md:w-32 md:h-40 flex items-center justify-center shadow-[6px_6px_0px_#e11d48]">00</div>
-                    <span class="text-[10px] font-bold mt-2 tracking-widest uppercase text-red-600">Secs</span>
-                </div>
+<section id="policy" class="py-20 px-6">
+    <div class="container mx-auto max-w-4xl">
+        <h2 class="text-4xl font-black mb-12 text-center italic uppercase"><span class="bg-white text-black px-4">The Policies</span></h2>
+        <div class="grid grid-cols-1 gap-6">
+            <div class="bg-zinc-900 border-l-8 border-red-600 p-8 hover:bg-zinc-800 transition shadow-lg">
+                <h3 class="text-2xl font-black mb-3 text-red-600 uppercase">01. 67sixseven (6เรื่องคุณบ่น7วันเราขยับ)</h3>
+                <p class="text-gray-300 italic"> 1สัปดาห์พวกเราจะจัดทำแบบสอบถามเพื่อให้ครูและนักเรียนกรอกปัญหาภายในโรงเรียน 6เรื่องที่พบมากสุดจะดำเนินการแก้ไขใน 7วัน</p>
+                <p class="mt-4 text-sm text-gray-500 underline uppercase">Status: Ready to Launch</p>
             </div>
-            
-            <p class="mt-10 text-zinc-500 font-bold italic uppercase tracking-[0.3em]">เตรียมตัวพบกับสวนชลเวอร์ชันใหม่</p>
+            <div class="bg-zinc-900 border-l-8 border-orange-500 p-8 hover:bg-zinc-800 transition shadow-lg">
+                <h3 class="text-2xl font-black mb-3 text-orange-500 uppercase">02. สัมภาษณ์สยาม (สวนชล) </h3>
+                <p class="text-gray-300 italic"> ร่วมทำคอนเทนต์สนุกกับพวกเราสุ่มสัมภาษณ์นักเรียนในโรงเรียนด้วยคำถามrandomสุดๆ </p>
+            </div>
+            <div class="bg-zinc-900 border-l-8 border-white p-8 hover:bg-zinc-800 transition shadow-lg">
+                <h3 class="text-2xl font-black mb-3 text-white uppercase">03. The Final Chapter (PROM)</h3>
+                <p class="text-gray-300 italic">ของขวัญชิ้นสุดท้ายก่อนจากลา เพราะเราอยากให้ม.6 ทุกคนมีความทรงจำที่สวยงามที่สุด</p>
+            </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            </div>
     </div>
 </section>
 
@@ -344,30 +331,7 @@
     </div>
 </section>
 
-    <section id="pfp-generator" class="py-20 bg-zinc-950 border-t-4 border-red-600">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-black italic mb-2 uppercase text-white">SUCSEED <span class="text-red-600">PFP CREATOR</span></h2>
-        <p class="text-zinc-500 mb-10 italic">สร้างรูปโปรไฟล์ทีมเบอร์ 1 แล้วเอาไปลง Social ได้เลย!</p>
-
-        <div class="max-w-2xl mx-auto bg-zinc-900 p-8 border-2 border-zinc-800 shadow-2xl">
-            <div class="relative w-64 h-64 mx-auto mb-8 border-4 border-white shadow-[0_0_20px_rgba(225,29,72,0.3)] overflow-hidden bg-black">
-                <canvas id="pfpCanvas" width="800" height="800" class="w-full h-full"></canvas>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <label class="cursor-pointer bg-white text-black px-6 py-3 font-black uppercase hover:bg-zinc-200 transition flex items-center justify-center gap-2">
-                    <input type="file" id="uploadPhoto" accept="image/*" class="hidden">
-                    <span>UPLOAD PHOTO 📸</span>
-                </label>
-                
-                <button id="downloadBtn" class="bg-red-600 text-white px-6 py-3 font-black uppercase hover:bg-red-700 transition disabled:opacity-50" disabled>
-                    DOWNLOAD PFP 🔥
-                </button>
-            </div>
-            <p class="text-[10px] text-zinc-600 mt-4 uppercase font-bold tracking-widest">*แนะนำให้ใช้รูปจัตุรัสเพื่อความเป๊ะ</p>
-        </div>
-    </div>
-</section>
+   
 <footer class="bg-black py-12 border-t border-zinc-800 text-center">
     <p class="font-black italic text-2xl mb-2">VOTE <span class="text-red-600 text-3xl">SUCSEED</span> #1</p>
     <p class="text-zinc-600 text-xs tracking-[0.3em] uppercase">Suankularb Wittayalai Chonburi | Student Council 2026</p>
@@ -449,74 +413,7 @@
         setTimeout(() => star.remove(), 600);
     });
 </script>
-<script>const canvas = document.getElementById('pfpCanvas');
-const ctx = canvas.getContext('2d');
-const uploadInput = document.getElementById('uploadPhoto');
-const downloadBtn = document.getElementById('downloadBtn');
 
-// ฟังก์ชันเริ่มต้น: วาดกรอบเปล่าๆ ไว้ก่อน
-function drawInitialFrame() {
-    ctx.fillStyle = '#111';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    drawFrameOverlay();
-}
-
-function drawFrameOverlay() {
-    // 1. วาดแถบสีแดงด้านล่าง
-    ctx.fillStyle = '#e11d48';
-    ctx.fillRect(0, 650, 800, 150);
-
-    // 2. ใส่ข้อความ SUCSEED
-    ctx.fillStyle = 'white';
-    ctx.font = 'italic 900 80px Kanit';
-    ctx.fillText('SUCSEED', 40, 745);
-
-    // 3. ใส่เลข #1 แบบตึงๆ
-    ctx.font = 'italic 900 120px Kanit';
-    ctx.fillText('#1', 630, 755);
-
-    // 4. วาดเส้นขอบสีขาวบางๆ
-    ctx.strokeStyle = 'white';
-    ctx.lineWidth = 15;
-    ctx.strokeRect(0, 0, 800, 800);
-}
-
-uploadInput.addEventListener('change', function(e) {
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-            // ล้าง Canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // วาดรูปผู้ใช้ (Crop ให้เป็นจัตุรัสกลางภาพ)
-            const size = Math.min(img.width, img.height);
-            const xOffset = (img.width - size) / 2;
-            const yOffset = (img.height - size) / 2;
-            
-            ctx.drawImage(img, xOffset, yOffset, size, size, 0, 0, 800, 800);
-            
-            // วาดกรอบทับลงไป
-            drawFrameOverlay();
-            
-            // เปิดให้โหลดได้
-            downloadBtn.disabled = false;
-        };
-        img.src = event.target.result;
-    };
-    reader.readAsDataURL(e.target.files[0]);
-});
-
-downloadBtn.addEventListener('click', function() {
-    const link = document.createElement('a');
-    link.download = 'SUCSEED-PFP.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-});
-
-// รันตอนโหลดเว็บ
-drawInitialFrame();
-    </script>
     <script>// --- ระบบ COUNTDOWN ---
 function startCountdown() {
     const electionDate = new Date("January 26, 2026 07:00:00").getTime();
