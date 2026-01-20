@@ -419,7 +419,38 @@
         setTimeout(() => star.remove(), 600);
     });
 
+    // Countdown Script (Target: 26 Jan 2026, 07:00)
+    function startCountdown() {
+        const electionDate = new Date("January 26, 2026 07:00:00").getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = electionDate - now;
 
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const dEl = document.getElementById("days");
+            const hEl = document.getElementById("hours");
+            const mEl = document.getElementById("minutes");
+            const sEl = document.getElementById("seconds");
+
+            if (dEl && hEl && mEl && sEl) {
+                dEl.innerText = d < 10 ? "0" + d : d;
+                hEl.innerText = h < 10 ? "0" + h : h;
+                mEl.innerText = m < 10 ? "0" + m : m;
+                sEl.innerText = s < 10 ? "0" + s : s;
+            }
+
+            if (distance < 0) {
+                clearInterval(timer);
+                if(dEl) dEl.innerText = "00";
+            }
+        }, 1000);
+    }
+    startCountdown();
+</script>
 
 </body>
 </html>
