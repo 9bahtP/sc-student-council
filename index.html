@@ -29,6 +29,8 @@
         .ticker-wrapper { overflow: hidden; background: #e11d48; white-space: nowrap; padding: 8px 0; border-bottom: 2px solid white; }
         .ticker-text { display: inline-block; animation: ticker 30s linear infinite; font-weight: 900; text-transform: uppercase; font-style: italic; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        /* Policy Hover Effect */
+        .policy-card:hover .policy-icon { color: #e11d48; opacity: 0.2; transform: scale(1.2) rotate(-10deg); }
     </style>
 </head>
 
@@ -49,7 +51,7 @@
 
 <div class="fixed top-[74px] left-0 w-full z-[45] ticker-wrapper">
     <div class="ticker-text uppercase tracking-widest text-sm">
-        SUCSEED NEWS : เข้าคูหากาเบอร์ 1  ——— เตรียมตัวพบกับกิจกรรมดีๆจากพวกเราได้เลย ——— VOTE NO.1 FOR REAL CHANGE ——— อย่าลืมเขย่าเซียมซีลุ้นดวงการเรียนด้านล่างหน้าเว็บ ! ——— แจกฟรี Wallpaper มือถือลายพรรค ด้านล่างสุด!
+        SUCSEED NEWS : เข้าคูหากาเบอร์ 1 ——— เตรียมตัวพบกับกิจกรรมดีๆจากพวกเราได้เลย ——— VOTE NO.1 FOR REAL CHANGE ——— อย่าลืมเขย่าเซียมซีลุ้นดวงการเรียนด้านล่างหน้าเว็บ !
     </div>
 </div>
 
@@ -65,6 +67,7 @@
         </div>
         <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase shrink-0 items-center">
             <li><a href="#home" class="hover:text-red-500 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-red-500 transition">About</a></li>
             <li><a href="#team" class="hover:text-red-500 transition">Team</a></li>
             <li><a href="#policy" class="hover:text-red-500 transition">Policy</a></li>
             <li><a href="#voice" class="hover:text-red-500 transition">Voice Box</a></li>
@@ -90,39 +93,29 @@
             <div class="text-center border-x border-zinc-800 px-10"><p class="text-3xl font-black text-white">24/7</p><p class="text-[10px] text-red-600 uppercase font-bold tracking-widest">รับฟังปัญหา</p></div>
             <div class="text-center"><p class="text-3xl font-black text-white">0</p><p class="text-[10px] text-red-600 uppercase font-bold tracking-widest">คำขายฝัน</p></div>
         </div>
-        <a href="#policy" class="bg-white text-black px-10 py-3 font-black uppercase hover:bg-red-600 hover:text-white transition-all inline-block shadow-[6px_6px_0px_#e11d48] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">รอนับถอยหลัง</a>
+        <a href="#policy" class="bg-white text-black px-10 py-3 font-black uppercase hover:bg-red-600 hover:text-white transition-all inline-block shadow-[6px_6px_0px_#e11d48] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">อ่านนโยบาย</a>
     </div>
 </section>
+
 <section id="about" class="py-20 bg-black relative overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none select-none flex items-center justify-center">
         <h2 class="text-[20vw] font-black italic">JUST ACT</h2>
     </div>
-
     <div class="container mx-auto px-6 relative z-10">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 flex justify-center">
                 <div class="relative">
                     <div class="absolute inset-0 bg-red-600 translate-x-4 translate-y-4"></div>
-                    <img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/613892652_851669544346220_4082493262980650938_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IAY_ect3HAgQ7kNvwEFTfCW&_nc_oc=Adl0-1mYQg73eF7-__Qfiy2ZODpvessJTmo-94NojpBXQCcfboD4qz51-6u7bAlO8Xg&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QG9qepTv7VQqlY9H-VgFuSocqusV19Yp_JVfgiIfo4lJg&oe=6991A1C2" 
-                         alt="SUCSEED LOGO" 
-                         class="relative z-10 w-80 h-80 object-cover border-4 border-white grayscale hover:grayscale-0 transition-all duration-500">
+                    <img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/613892652_851669544346220_4082493262980650938_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IAY_ect3HAgQ7kNvwEFTfCW&_nc_oc=Adl0-1mYQg73eF7-__Qfiy2ZODpvessJTmo-94NojpBXQCcfboD4qz51-6u7bAlO8Xg&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QG9qepTv7VQqlY9H-VgFuSocqusV19Yp_JVfgiIfo4lJg&oe=6991A1C2" alt="SUCSEED LOGO" class="relative z-10 w-80 h-80 object-cover border-4 border-white grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
             </div>
-
             <div class="w-full md:w-1/2 text-left">
                 <h3 class="text-red-600 font-black italic tracking-[0.3em] uppercase mb-2">Who we are?</h3>
-                <h2 class="text-5xl md:text-7xl font-black italic tracking-tighter mb-6 uppercase">
-                    พรรค <span class="text-red-600">SUCSEED</span>
-                </h2>
+                <h2 class="text-5xl md:text-7xl font-black italic tracking-tighter mb-6 uppercase">พรรค <span class="text-red-600">SUCSEED</span></h2>
                 <div class="space-y-6 text-zinc-400 font-medium italic text-lg leading-relaxed">
-                    <p class="border-l-4 border-red-600 pl-4">
-                        "เราไม่ใช่แค่กลุ่มนักเรียนที่อยากมาเป็นสภาฯ แต่เราคือกลุ่มคนที่ <span class="text-white font-bold">กล้าที่จะคิด และพร้อมที่จะทำ</span> เพื่อเปลี่ยนแปลงสวนกุหลาบชลบุรีให้ดีขึ้น"
-                    </p>
-                    <p>
-                        คอนเซปต์ของพวกเราคือ <span class="text-white underline decoration-red-600">Just act, No talk</span> เราจะไม่เน้นคำขายฝันที่สวยหรู แต่เราจะเน้นผลงานที่จับต้องได้จริง ความซื่อสัตย์ และความจริงใจที่มีต่อเพื่อนพี่น้องทุกคน
-                    </p>
+                    <p class="border-l-4 border-red-600 pl-4">"เราไม่ใช่แค่กลุ่มนักเรียนที่อยากมาเป็นสภาฯ แต่เราคือกลุ่มคนที่ <span class="text-white font-bold">กล้าที่จะคิด และพร้อมที่จะทำ</span> เพื่อเปลี่ยนแปลงสวนกุหลาบชลบุรีให้ดีขึ้น"</p>
+                    <p>คอนเซปต์ของพวกเราคือ <span class="text-white underline decoration-red-600">Just act, No talk</span> เราจะไม่เน้นคำขายฝันที่สวยหรู แต่เราจะเน้นผลงานที่จับต้องได้จริง ความซื่อสัตย์ และความจริงใจที่มีต่อเพื่อนพี่น้องทุกคน</p>
                 </div>
-                
                 <div class="mt-8 flex flex-wrap gap-4">
                     <div class="bg-zinc-900 px-6 py-2 border border-zinc-700 font-black text-sm uppercase italic">#เบอร์1</div>
                     <div class="bg-zinc-900 px-6 py-2 border border-zinc-700 font-black text-sm uppercase italic">#ทำจริงไม่พูดเยอะ</div>
@@ -132,60 +125,28 @@
         </div>
     </div>
 </section>
+
 <section id="team" class="py-20 bg-zinc-950/50">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-4xl font-black italic underline decoration-red-600 uppercase">Our Squad Members</h2>
             <p class="text-zinc-500 text-xs mt-2 font-bold uppercase tracking-widest animate-pulse">👇 Tap card to view info 👇</p>
         </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-end mb-12">
             <div onclick="openModal('https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC', 'นายธาวา พัชรนรากุล', 'รองประธาน', 'กำขี้ ดีกว่า กำตด')" class="member-card cursor-pointer group order-2 lg:order-1 relative">
-                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative overflow-hidden">
-                    <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
-                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">โตโน่</h3>
-                    <p class="text-zinc-500 text-xs font-bold uppercase">รองประธาน</p>
-                </div>
+                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative overflow-hidden"><div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative"><img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC" class="w-full h-full object-cover"></div><h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">โตโน่</h3><p class="text-zinc-500 text-xs font-bold uppercase">รองประธาน</p></div>
             </div>
-            <div onclick="openModal('https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BqpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9', 'นางสาวกฤติยา ทัพซ้าย', 'เลขานุการ', 'ความลำบากจะหลอมคนให้ทนทาน')" class="member-card cursor-pointer group order-3 lg:order-2">
-                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative">
-                    <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
-                        <img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BqpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">จูน</h3>
-                    <p class="text-zinc-500 text-xs font-bold uppercase">เลขานุการสภา</p>
-                </div>
+            <div onclick="openModal('https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9', 'นางสาวกฤติยา ทัพซ้าย', 'เลขานุการ', 'ความลำบากจะหลอมคนให้ทนทาน')" class="member-card cursor-pointer group order-3 lg:order-2">
+                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative"><div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative"><img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9" class="w-full h-full object-cover"></div><h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">จูน</h3><p class="text-zinc-500 text-xs font-bold uppercase">เลขานุการสภา</p></div>
             </div>
             <div onclick="openModal('https://scontent.fbkk29-7.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwEA7Sgk&_nc_oc=Adl87gBK3jWS45AB3_u3XDCvNG_TMRADzXz2_yd6HdOpE7Wy6JgKDgtbwkUUFUWixNw&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-7.fna&oh=03_Q7cD4QGj4AOtX4_Y_wphF5fwZ2tAHJV9XAblR9LovsEC_51NKA&oe=69927C7F', 'นางสาวณัฐณิชา โตกำแพง', 'ประธานนักเรียน', 'ไม่พูดให้จำ แต่จะทำให้ดู')" class="member-card cursor-pointer group order-1 lg:order-3 relative">
-                <div class="bg-red-600 p-10 transform lg:-translate-y-8 shadow-[10px_10px_0px_rgba(255,255,255,0.2)] text-center border-4 border-white group-hover:bg-white group-hover:border-red-600 transition-colors duration-300">
-                    <div class="absolute top-3 right-3 animate-bounce">👆</div>
-                    <div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden shadow-xl relative">
-                        <img src="https://scontent.fbkk29-7.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwEA7Sgk&_nc_oc=Adl87gBK3jWS45AB3_u3XDCvNG_TMRADzXz2_yd6HdOpE7Wy6JgKDgtbwkUUFUWixNw&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-7.fna&oh=03_Q7cD4QGj4AOtX4_Y_wphF5fwZ2tAHJV9XAblR9LovsEC_51NKA&oe=69927C7F" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-black text-2xl uppercase group-hover:text-black">หยก</h3>
-                    <p class="text-white text-sm font-bold mb-4 italic underline group-hover:text-red-600">ประธานนักเรียน</p>
-                    <p class="text-xs font-bold bg-black text-white py-2 px-4 uppercase tracking-tighter inline-block shadow-lg">Tap For Info</p>
-                </div>
+                <div class="bg-red-600 p-10 transform lg:-translate-y-8 shadow-[10px_10px_0px_rgba(255,255,255,0.2)] text-center border-4 border-white group-hover:bg-white group-hover:border-red-600 transition-colors duration-300"><div class="absolute top-3 right-3 animate-bounce">👆</div><div class="w-32 h-32 bg-white mx-auto mb-6 border-4 border-black overflow-hidden shadow-xl relative"><img src="https://scontent.fbkk29-7.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwEA7Sgk&_nc_oc=Adl87gBK3jWS45AB3_u3XDCvNG_TMRADzXz2_yd6HdOpE7Wy6JgKDgtbwkUUFUWixNw&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-7.fna&oh=03_Q7cD4QGj4AOtX4_Y_wphF5fwZ2tAHJV9XAblR9LovsEC_51NKA&oe=69927C7F" class="w-full h-full object-cover"></div><h3 class="font-black text-2xl uppercase group-hover:text-black">หยก</h3><p class="text-white text-sm font-bold mb-4 italic underline group-hover:text-red-600">ประธานนักเรียน</p><p class="text-xs font-bold bg-black text-white py-2 px-4 uppercase tracking-tighter inline-block shadow-lg">Tap For Info</p></div>
             </div>
             <div onclick="openModal('https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwFpDRNt&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA', 'นายกฤตเมธ จันละบุตร', 'สถานที่', 'ซักซี้ด ซักรีด ซักไซ้')" class="member-card cursor-pointer group order-4">
-                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative">
-                    <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
-                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwFpDRNt&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">คิว</h3>
-                    <p class="text-zinc-500 text-xs font-bold uppercase">ฝ่ายสถานที่</p>
-                </div>
+                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative"><div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative"><img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwFpDRNt&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA" class="w-full h-full object-cover"></div><h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">คิว</h3><p class="text-zinc-500 text-xs font-bold uppercase">ฝ่ายสถานที่</p></div>
             </div>
             <div onclick="openModal('https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47', 'นางสาวเอมี่ อมิตา ลิม', 'ฝ่ายกิจกรรม', 'ไม่เก่งที่สุด แต่ตั้งใจที่สุด')" class="member-card cursor-pointer group order-5">
-                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative">
-                    <div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative">
-                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">เอมี่</h3>
-                    <p class="text-zinc-500 text-xs font-bold uppercase">ฝ่ายกิจกรรม</p>
-                </div>
+                <div class="bg-zinc-900 p-6 border-b-4 border-red-600 text-center relative"><div class="w-24 h-24 bg-zinc-800 mx-auto mb-4 border-2 border-white overflow-hidden relative"><img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47" class="w-full h-full object-cover"></div><h3 class="font-bold text-lg group-hover:text-red-500 transition-colors">เอมี่</h3><p class="text-zinc-500 text-xs font-bold uppercase">ฝ่ายกิจกรรม</p></div>
             </div>
         </div>
         <div class="mt-20">
@@ -206,64 +167,40 @@
     </div>
 </section>
 
-<div class="mt-16 text-center">
-    <h2 class="text-5xl font-black italic uppercase text-white mb-10">**
-
-        <span class="text-red-600">KEY</span> POLICIES
-
-    </h2>**
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">**
-
-        <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
-
-            <div class="absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-colors">01</div>
-            <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">ห้องน้ำต้องดีกว่านี้</h4>
-
-            <p class="text-zinc-400 text-sm">เราจะผลักดันงบประมาณซ่อมแซมและปรับปรุงความสะอาดห้องน้ำทุกตึก พร้อมสบู่และกระดาษชำระที่เพียงพอ</p>
-
+<section id="policy" class="py-24 bg-black">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-5xl font-black italic uppercase text-white mb-16">
+            <span class="text-red-600">KEY</span> POLICIES
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-all">01</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">67</h4>
+                <p class="text-zinc-400 text-sm">6เรื่องที่คนบ่น 7วันเราดำเนินการแก้ไข</p>
+            </div>
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-all">02</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">Canva pro for education</h4>
+                <p class="text-zinc-400 text-sm">ทุกคนในโรงเรียนสวนกุหลาบวิทยาลัยชลบุรี จะได้canva pro ไปแบบฟรีๆ</p>
+            </div>
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-all">03</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">สัมภาษณ์สยาม(สวนชล)</h4>
+                <p class="text-zinc-400 text-sm">ร่วมทำคอนเทนต์สนุกๆกับพวกเราผ่านพรรคsucseed โดยสุ่มคำถามที่randomสุด</p>
+            </div>
+            <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
+                <div class="policy-icon absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-all">04</div>
+                <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">The Final Chapter</h4>
+                <p class="text-zinc-400 text-sm">กิจกรรมสำหรับนักเรียนชั้น ม.6 เพื่อเป็นการจบการศึกษาเราจึงจัดทำขึ้นเพื่อเก็บความทรงจำความสามัคคี</p>
+            </div>
         </div>
-
-        <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
-
-            <div class="absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-colors">02</div>
-
-            <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">Wi-Fi จุดสำคัญ</h4>
-
-            <p class="text-zinc-400 text-sm">ขยายจุดสัญญาณ Wi-Fi บริเวณโรงอาหารและใต้อาคารเรียน เพื่อให้ทุกคนเข้าถึงแหล่งข้อมูลได้อย่างลื่นไหล</p>
-
     </div>
-
-        <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
-
-            <div class="absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-colors">03</div>
-
-            <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">E-Sports League</h4>
-
-            <p class="text-zinc-400 text-sm">จัดตั้งการแข่งขัน E-Sports ประจำปีของโรงเรียนอย่างเป็นทางการ เพื่อเปิดพื้นที่ให้คนมีของได้โชว์ฝีมือ</p>
-
-        </div>**
-
-        <div class="policy-card bg-zinc-900 border border-zinc-700 p-8 relative overflow-hidden group hover:border-red-600 hover:-translate-y-2 transition-all duration-300">
-
-            <div class="absolute top-4 right-4 text-6xl text-zinc-800 font-black group-hover:text-red-600/20 transition-colors">04</div>
-
-            <h4 class="text-2xl font-black text-white italic uppercase mb-2 group-hover:text-red-500 transition-colors">เพิ่มพื้นที่พักผ่อน</h4>
-
-            <p class="text-zinc-400 text-sm">ปรับปรุงพื้นที่ว่างใต้อาคารให้มีที่นั่งเพียงพอ สำหรับนั่งรอผู้ปกครอง นั่งทำการบ้าน หรือนั่งคุยกับเพื่อน</p>
-
-        </div>
-
-    </div>
-
-</div>
-
+</section>
 
 <section id="voice" class="py-20 bg-zinc-950 border-y-2 border-red-600">
     <div class="container mx-auto max-w-3xl px-6 text-center">
         <h2 class="text-4xl font-black uppercase text-white mb-2 italic">YOUR VOICE <span class="text-red-600">MATTERS</span></h2>
         <p class="text-zinc-500 mb-8 font-bold">มีอะไรอยากบอกพรรคเบอร์ 1 ส่งมาได้เลย (ข้อความจะถูกส่งไปที่อีเมลแอดมิน)</p>
-        
         <form action="https://formspree.io/f/xykkedad" method="POST" class="bg-black border border-zinc-800 p-8 shadow-[10px_10px_0px_#e11d48]">
             <div class="mb-4 text-left">
                 <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">หัวข้อเรื่อง</label>
@@ -273,9 +210,7 @@
                 <label class="block text-red-600 text-xs font-black uppercase tracking-widest mb-1">รายละเอียด</label>
                 <textarea name="message" rows="3" placeholder="พิมพ์ข้อความที่นี่..." required class="w-full bg-zinc-900 border border-zinc-700 text-white p-3 focus:outline-none focus:border-red-600 font-bold"></textarea>
             </div>
-            
             <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
-            
             <button type="submit" class="w-full bg-red-600 text-white font-black uppercase py-4 hover:bg-white hover:text-red-600 transition-colors">
                 SEND TO EMAIL ✉️
             </button>
@@ -298,8 +233,6 @@
         </div>
     </div>
 </section>
-
-
 
 <section class="py-20 px-6 bg-zinc-950">
     <div class="container mx-auto max-w-4xl bg-zinc-900 border-l-8 border-red-600 p-8 shadow-lg">
@@ -417,38 +350,6 @@
         }, 10);
         setTimeout(() => star.remove(), 600);
     });
-
-    // Countdown Script (Target: 26 Jan 2026, 07:00)
-    function startCountdown() {
-        const electionDate = new Date("January 26, 2026 07:00:00").getTime();
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = electionDate - now;
-
-            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((distance % (1000 * 60)) / 1000);
-
-            const dEl = document.getElementById("days");
-            const hEl = document.getElementById("hours");
-            const mEl = document.getElementById("minutes");
-            const sEl = document.getElementById("seconds");
-
-            if (dEl && hEl && mEl && sEl) {
-                dEl.innerText = d < 10 ? "0" + d : d;
-                hEl.innerText = h < 10 ? "0" + h : h;
-                mEl.innerText = m < 10 ? "0" + m : m;
-                sEl.innerText = s < 10 ? "0" + s : s;
-            }
-
-            if (distance < 0) {
-                clearInterval(timer);
-                if(dEl) dEl.innerText = "00";
-            }
-        }, 1000);
-    }
-    startCountdown();
 </script>
 
 </body>
